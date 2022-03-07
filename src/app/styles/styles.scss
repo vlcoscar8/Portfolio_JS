@@ -12,7 +12,79 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: blanchedalmond;
+  background-color: $downy;
+  color: #e8f8f5;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.header, .footer {
+  text-align: center;
+}
+
+.main {
+  flex: 1 0 auto;
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+}
+
+.container {
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+}
+
+.pokeball-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.pokeball {
+  background-image: url('../assets/pokeball.png');
+  background-size: 100%;
+  cursor: pointer;
+  color: $white;
+  text-decoration: none;
+  height: 100px;
+  width: 100px;
+  position: relative;
+
+  &:hover {
+    -webkit-animation: shak 0.3s infinite;
+    -moz-animation: shak 0.3s infinite;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  padding-inline-start: 0;
+  margin-top: 30px;
+}
+
+.flex-item {
+  list-style: none;
+  padding: 40px;
+  background-color: #17a589;
   text-align: center;
 }
 
