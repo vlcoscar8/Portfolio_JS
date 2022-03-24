@@ -12,7 +12,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: $downy;
+  background-color: #fabada;
   color: #e8f8f5;
   margin: 0;
   font-family: 'Press Start 2P', cursive;
@@ -44,50 +44,6 @@ body {
   font-size: 54px;
 }
 
-.pokeball-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-}
-
-.pokeball {
-  background-image: url('../assets/pokeball.png');
-  background-size: 100%;
-  cursor: pointer;
-  color: $white;
-  text-decoration: none;
-  height: 100px;
-  width: 100px;
-  position: relative;
-
-  &:hover {
-    -webkit-animation: shak 0.3s infinite;
-    -moz-animation: shak 0.3s infinite;
-    color: $white;
-    text-decoration: none;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
-}
-
-.flex-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 20px;
-  padding-inline-start: 0;
-  margin-top: 30px;
-}
-
-.flex-item {
-  list-style: none;
-  padding: 40px;
-  background-color: #17a589;
-  text-align: center;
-}
-
 .header {
   height: 80px;
   background-color: cornflowerblue;
@@ -95,4 +51,5 @@ body {
 
 .main {
   height: calc(100% - 80px);
+  text-align: center;
 }
