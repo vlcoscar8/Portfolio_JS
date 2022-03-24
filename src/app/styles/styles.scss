@@ -12,36 +12,8 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #fabada;
-  color: #e8f8f5;
-  margin: 0;
-  font-family: 'Press Start 2P', cursive;
-}
-
-.header, .footer {
+  background-color: blanchedalmond;
   text-align: center;
-}
-
-.main {
-  flex: 1 0 auto;
-
-  .logo {
-    display: block;
-    margin: 0 auto;
-    height: 120px;
-    margin-bottom: 30px;
-  }
-}
-
-.container {
-  padding: 40px;
-  margin: 0 auto;
-}
-
-.title {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 54px;
 }
 
 .header {
@@ -51,5 +23,4 @@ body {
 
 .main {
   height: calc(100% - 80px);
-  text-align: center;
 }
