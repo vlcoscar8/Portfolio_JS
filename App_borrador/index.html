@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Developer jobs finder</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Jobs finder</h1>
+            <ul class="header-list">
+                <li id="favourites-jobs-btn">My jobs</li>
+            </ul>
+        </header>
+        <nav id="nav-container">
+            <input type="text" placeholder="Search job" id="search-job" />
+            <select name="categories" id="select-options">
+                <option value="categories" disabled selected>Categories</option>
+                <option value="software development">
+                    Software Development
+                </option>
+                <option value="customer service">Customer Service</option>
+                <option value="design">Design</option>
+                <option value="sales">Sales</option>
+                <option value="marketing">Marketing</option>
+                <option value="product">Product</option>
+                <option value="writing">Writing</option>
+                <option value="all others">All</option>
+            </select>
+        </nav>
+        <section>
+            <div id="filters-container">
+                <div>
+                    <h3>Location</h3>
+                    <div>
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="location-usa"
+                                value="usa only"
+                                class="checkbox-filter"
+                            />
+                            USA Only</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="location-EU"
+                                value="eu"
+                                class="checkbox-filter"
+                            />
+                            Europe</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                id="location-world"
+                                value="worldwide"
+                                class="checkbox-filter"
+                            />
+                            Worldwide</label
+                        >
+                    </div>
+                </div>
+            </div>
+            <div id="jobsList-container"></div>
+        </section>
+        <section id="pagination-container" class="pagination-container">
+            <button id="previous-btn">Previous</button>
+            <h3 id="pagination-number">1</h3>
+            <button id="next-btn">Next</button>
+        </section>
+    </body>
+</html>

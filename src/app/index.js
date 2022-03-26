@@ -1,11 +1,8 @@
-import './styles/styles.scss';
-import 'bootstrap';
+import { printHome } from "./views/view-home/print-home";
+import { setHomePage } from "./listeners/hashchange-listener";
+import "./styles/styles.scss";
 
-function addListeners() {
-  // TODO
-  console.log('addListeners');
-}
-
-window.onload = function () {
-  addListeners();
+window.onload = () => {
+    printHome();
+    setHomePage();
 };
