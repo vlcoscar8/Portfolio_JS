@@ -206,6 +206,23 @@ nav {
     }
 }
 
+///// Company Page
+
+.company__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    .company-tag {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
 ////// Spinner //////
 
 .lds-dual-ring {

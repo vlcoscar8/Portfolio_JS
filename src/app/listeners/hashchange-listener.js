@@ -16,9 +16,36 @@ window.addEventListener("hashchange", async () => {
         case "#detail":
             setDetailPage();
             break;
+        case "#company":
+            setCompanyPage();
+            break;
         default:
     }
 });
+
+const setCompanyPage = () => {
+    if (document.getElementById("detail-container")) {
+        document.getElementById("detail-container").remove();
+    }
+
+    if (document.getElementById("favourite-container")) {
+        document
+            .getElementById("favourite-container")
+            .classList.add("no-active");
+    }
+
+    if (document.getElementById("nav-container")) {
+        document.getElementById("nav-container").classList.add("no-active");
+    }
+
+    if (document.getElementById("jobs-container")) {
+        document.getElementById("jobs-container").remove();
+    }
+
+    if (document.getElementById("filters-container")) {
+        document.getElementById("filters-container").classList.add("no-active");
+    }
+};
 
 const setFavouriteJobs = () => {
     window.location.hash = "#favouritesJobs";

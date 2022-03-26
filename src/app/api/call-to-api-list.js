@@ -1,5 +1,3 @@
-import { toggleSpinner } from "../views/spinner/load-spinner";
-
 // Get data from API
 const getData = async () => {
     // toggleSpinner();
