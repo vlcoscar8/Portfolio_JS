@@ -1,0 +1,19 @@
+.company__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    .company-tag {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #fed294;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ffdeb0;
+        }
+    }
+}

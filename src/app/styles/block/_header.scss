@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: beige;
+    height: 50px;
+    padding: 10px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-list {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            color: grey;
+        }
+    }
+}

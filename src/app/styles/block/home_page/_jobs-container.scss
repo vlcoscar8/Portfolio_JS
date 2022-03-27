@@ -1,0 +1,54 @@
+.job-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fed294;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ffdeb0;
+    }
+}
+
+.job-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    align-self: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.job-info {
+    display: flex;
+    width: 75%;
+    gap: 5px;
+}
+
+.job-tags {
+    display: flex;
+    gap: 5px;
+}
+
+.favourites-btn {
+    font-size: 20px;
+    color: rgb(49, 49, 49);
+}
+
+.fav-active {
+    transform: scale(1.5);
+    color: rgb(255, 255, 255);
+    transition: 0.4s ease-in;
+}
+
+.job-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: end;
+    margin-right: 5px;
+}
