@@ -217,9 +217,14 @@ nav {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        border: 1px solid black;
         border-radius: 10px;
         padding: 5px;
+        background-color: #fed294;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ffdeb0;
+        }
     }
 }
 

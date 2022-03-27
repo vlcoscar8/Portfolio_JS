@@ -1,5 +1,7 @@
 import { printHTMLfromData } from "./job-container";
 import { clickListeners } from "../../listeners/click-listeners";
+import { jobsArray } from "../view-favourite/print-fav";
+import { checkFavJobs } from "./print-home";
 
 // Create the function to change the data when the user click the next or previous button
 const paginationListJobs = (
@@ -80,6 +82,9 @@ const getJobsFromList = (
 ) => {
     let currentJobs = data.slice(firstIndex, finalIndex);
     dataContainer.innerHTML = printHTMLfromData(currentJobs);
+
+    checkFavJobs(jobsArray);
+
     jobsContainer.appendChild(dataContainer);
 };
 

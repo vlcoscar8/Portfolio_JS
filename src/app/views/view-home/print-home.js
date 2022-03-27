@@ -4,10 +4,10 @@ import { selectOptions } from "../view-filters/input-categories";
 import { searchJobInput } from "../view-filters/input-search";
 import { printCategories } from "../view-filters/print-categories";
 import { jobsArray } from "../view-favourite/print-fav";
-import { printCompany } from "../view-companies/print-company";
 
 // Function to print the data from API into a container ////////
 const printHome = async () => {
+    window.location.hash = "#home";
     const data = await getData();
     console.log(data);
 
@@ -36,4 +36,4 @@ const checkFavJobs = (jobsArray) => {
     });
 };
 
-export { printHome };
+export { printHome, checkFavJobs };

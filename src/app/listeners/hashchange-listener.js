@@ -19,9 +19,29 @@ window.addEventListener("hashchange", async () => {
         case "#company":
             setCompanyPage();
             break;
+        case "#companyDetail":
+            setCompanyDetailPage();
+            break;
         default:
     }
 });
+
+const setCompanyDetailPage = () => {
+    if (document.getElementById("company-container")) {
+        document.getElementById("company-container").classList.add("no-active");
+    }
+    if (document.getElementById("company-detail")) {
+        document.getElementById("company-detail").classList.remove("no-active");
+    }
+    if (document.getElementById("pagination-container")) {
+        document
+            .getElementById("pagination-container")
+            .classList.add("no-active");
+        document
+            .getElementById("pagination-container")
+            .classList.remove("pagination");
+    }
+};
 
 const setCompanyPage = () => {
     if (document.getElementById("detail-container")) {
@@ -38,12 +58,28 @@ const setCompanyPage = () => {
         document.getElementById("nav-container").classList.add("no-active");
     }
 
-    if (document.getElementById("jobs-container")) {
-        document.getElementById("jobs-container").remove();
-    }
-
     if (document.getElementById("filters-container")) {
         document.getElementById("filters-container").classList.add("no-active");
+    }
+
+    if (document.getElementById("company-detail")) {
+        document.getElementById("company-detail").classList.add("no-active");
+    }
+
+    if (document.getElementById("pagination-container")) {
+        document
+            .getElementById("pagination-container")
+            .classList.add("no-active");
+    }
+
+    if (document.getElementById("company-container")) {
+        document
+            .getElementById("company-container")
+            .classList.remove("no-active");
+    }
+
+    if (document.getElementById("jobs-container")) {
+        document.getElementById("jobs-container").remove();
     }
 };
 
@@ -100,11 +136,13 @@ const setOtherPage = () => {
     if (document.getElementById("nav-container")) {
         document.getElementById("nav-container").classList.add("no-active");
     }
+
+    if (document.getElementById("company-detail")) {
+        document.getElementById("company-detail").classList.add("no-active");
+    }
 };
 
 const setHomePage = () => {
-    window.location.hash = "#home";
-
     if (document.getElementById("detail-container")) {
         document.getElementById("detail-container").remove();
     }
@@ -128,6 +166,14 @@ const setHomePage = () => {
     }
 
     document.getElementById("search-job").classList.remove("no-active");
+
+    if (document.getElementById("company-container")) {
+        document.getElementById("company-container").classList.add("no-active");
+    }
+
+    if (document.getElementById("company-detail")) {
+        document.getElementById("company-detail").classList.add("no-active");
+    }
 };
 
 export { setHomePage, setDetailPage };

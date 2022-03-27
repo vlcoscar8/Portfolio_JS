@@ -18,11 +18,12 @@ class CompanyClass {
     }
 }
 
-class CompanyDetailClass extends PokemonClass {
-    constructor(id, name, image, jobTitle, category) {
+class CompanyDetailClass extends CompanyClass {
+    constructor(id, name, image, jobTitle, category, location) {
         super(id, name, image);
         this.jobTitle = jobTitle;
         this.category = category;
+        this.location = location;
     }
 
     getJobTitle() {
@@ -31,6 +32,10 @@ class CompanyDetailClass extends PokemonClass {
 
     getCategory() {
         return this.category;
+    }
+
+    getLocation() {
+        return this.location;
     }
 }
 
