@@ -6,6 +6,11 @@
 
     position: relative;
 
+    @include tablet {
+        width: 70vw;
+        margin-left: 13vw;
+    }
+
     .fav-job-container {
         display: flex;
         flex-direction: column;
@@ -38,11 +43,19 @@
 
             h2 {
                 font-size: 1.8rem;
+
+                @include tablet {
+                    font-size: 2rem;
+                }
             }
 
             h3 {
                 font-size: 1.6rem;
                 color: $company-color;
+
+                @include tablet {
+                    font-size: 1.8rem;
+                }
             }
 
             .job-info {
@@ -53,6 +66,10 @@
 
                 .job-img {
                     @include image_company(7rem, 7rem);
+
+                    @include tablet {
+                        @include image_company(9rem, 9rem);
+                    }
                 }
 
                 &__content {
@@ -64,6 +81,14 @@
                     .job-tags {
                         display: flex;
                         gap: 1rem;
+
+                        .tag {
+                            @include tag;
+
+                            @include tablet {
+                                font-size: 1.7rem;
+                            }
+                        }
                     }
                 }
             }

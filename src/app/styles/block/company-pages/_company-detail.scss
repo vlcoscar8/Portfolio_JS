@@ -43,6 +43,11 @@
             gap: 1rem;
             margin-top: 2rem;
 
+            @include tablet {
+                flex-direction: row;
+                justify-content: center;
+            }
+
             .job-tag {
                 display: flex;
                 flex-direction: column;
@@ -61,6 +66,11 @@
                 cursor: pointer;
                 transition: all 0.5s ease;
 
+                @include tablet {
+                    width: 40vw;
+                    gap: 2rem;
+                }
+
                 &:hover {
                     transform: scale(1.02);
                     background: $hover-color;
@@ -69,11 +79,21 @@
                 &__title {
                     font-size: 2rem;
                     font-weight: 400;
+
+                    @include tablet {
+                        font-size: 2.3rem;
+                    }
                 }
 
                 .company-tag__container {
                     display: flex;
                     gap: 1rem;
+                    width: 80%;
+
+                    .tag {
+                        @include tag;
+                        font-size: 1.6rem;
+                    }
                 }
             }
         }

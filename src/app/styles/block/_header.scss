@@ -22,14 +22,16 @@ header {
 
     .header-list {
         display: flex;
-        justify-content: start;
-        gap: 1rem;
+        justify-content: end;
+        gap: 2rem;
 
         list-style: none;
-        white-space: nowrap;
+
         position: relative;
 
-        width: 50%;
+        width: 40%;
+        padding: 0;
+        margin-right: 3rem;
 
         li {
             color: black;
@@ -57,8 +59,8 @@ header {
             font-size: 1.5rem;
 
             position: absolute;
-            right: 0.2rem;
-            top: -0.7rem;
+            right: -1rem;
+            top: -1.5rem;
         }
     }
 }

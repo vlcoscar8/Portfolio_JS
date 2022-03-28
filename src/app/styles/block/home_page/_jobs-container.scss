@@ -1,3 +1,19 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 70vw;
+        margin-left: 15rem;
+    }
+
+    @include desktop {
+        margin-left: 24rem;
+    }
+}
+
 .job-container {
     display: flex;
     justify-content: space-between;
@@ -30,23 +46,39 @@
         width: 90%;
         gap: 0.5rem;
 
+        @include tablet {
+            gap: 1.5rem;
+        }
+
         .job-img {
             @include image_company(7rem, 7rem);
+
+            @include tablet {
+                @include image_company(8rem, 8rem);
+            }
         }
 
         .job-description {
             display: flex;
             flex-direction: column;
             width: 80%;
-            gap: 10px;
+            gap: 1rem;
 
             .job-title {
-                font-size: 18px;
+                font-size: 1.8rem;
+
+                @include tablet {
+                    font-size: 2rem;
+                }
             }
 
             .company-title {
-                font-size: 16px;
+                font-size: 1.6rem;
                 color: $company-color;
+
+                @include tablet {
+                    font-size: 1.8rem;
+                }
             }
             .job-tags {
                 display: flex;
@@ -54,6 +86,10 @@
 
                 .tag {
                     @include tag;
+
+                    @include tablet {
+                        font-size: 1.7rem;
+                    }
                 }
             }
         }
