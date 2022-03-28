@@ -17,13 +17,14 @@
     </head>
     <body>
         <header>
-            <div class="logo">
-                <h1>Jobs finder</h1>
+            <div class="title">
+                <h1><a href="#home">Jobs finder</a></h1>
             </div>
 
             <ul class="header-list">
                 <li id="company-btn">Companies</li>
                 <li id="favourites-jobs-btn">My jobs</li>
+                <span id="fav-counter" class="no-active">2</span>
             </ul>
         </header>
         <nav id="nav-container" class="search-container">
@@ -79,8 +80,12 @@
         <section id="jobsList-container"></section>
         <section id="favourite-container"></section>
         <section id="company-container"></section>
-        <section id="company-detail">
-            <a href="#home">Home</a>
+        <section id="company-detail" class="company-detail">
+            <a href="#home" class="home-title company-home"
+                >Home<i class="fa-solid fa-angles-right home-icon"></i></a
+            ><a href="#company" class="home-title company-home company-company"
+                >Company<i class="fa-solid fa-angles-right home-icon"></i
+            ></a>
             <div
                 class="job-detail__container"
                 id="companyDetail-container"

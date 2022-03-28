@@ -22,23 +22,30 @@ const printCompany = (data) => {
 
 const insertHTMLfromData = (dataToPrint, firstIndex, lastIndex, companies) => {
     const companyContainer = document.getElementById("company-container");
+    companyContainer.classList.add("company__page");
 
     let contentCompany = dataToPrint
         .map(
             (company) => `
-        <div class="company-tag" id="${company.name}">
-        <img src="${company.image}" alt="" class="job-img"/>
-        <div>
-          <h3>${company.name}</h3>
-        </div>
-        </div>}`
+            <div class="card" id="${company.name}">
+                <div class="company-tag card__side card__side--front" ">
+                    <img src="${company.image}" alt="" class="job-img"/>
+                    <div>
+                        <h3 class="company-name">${company.name}</h3>
+                    </div>
+                </div>
+                <div class="card__side card__side--back">
+                    <button class="offers-btn"><h3>See jobs offers</h3></button>
+                </div>
+            </div>
+        `
         )
         .join("");
 
     companyContainer.innerHTML = `
-    <a href="#home">Home</a>
+    <a href="#home" class="home-title-fav">Home<i class="fa-solid fa-angles-right home-icon"></i></a>
     <div class="company__container">
-    ${contentCompany.split("}").join("")}
+    ${contentCompany}
     </div>
     <div>
         <button id="previous-btn-companies">Previous</button>
@@ -66,7 +73,7 @@ const insertHTMLfromData = (dataToPrint, firstIndex, lastIndex, companies) => {
         reducePaginationCompanies(companies, firstIndex, lastIndex);
     };
 
-    const companyTag = document.querySelectorAll(".company-tag");
+    const companyTag = document.querySelectorAll(".offers-btn");
 
     companyTag.forEach((tag) => {
         tag.addEventListener("click", () => showCompanyDetail(tag));

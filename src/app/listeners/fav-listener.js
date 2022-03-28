@@ -1,6 +1,7 @@
 import { addJobsToArray, jobsArray } from "../views/view-favourite/print-fav";
-import { createFavDefaultPage } from "../views/view-detail/create-default-fav";
-import { addJobsToFavPage } from "../views/view-detail/add-jobs-fav";
+import { createFavDefaultPage } from "../views/view-favourite/create-default-fav";
+import { addJobsToFavPage } from "../views/view-favourite/add-jobs-fav";
+import { detailListener } from "./detail-listener";
 
 // Event listener click on the "add to my job" button
 const favouriteListener = (data) => {
@@ -17,9 +18,25 @@ const favouriteListener = (data) => {
             // Toggle a mark if the user click to "add favourite job" button
             toggleFavouriteMark(button, data);
 
+            displayFavCounter(jobsArray);
+
+            detailListener(data);
+
             console.log(jobsArray);
         };
     });
+};
+
+const displayFavCounter = (jobsArray) => {
+    const favCounter = document.getElementById("fav-counter");
+
+    if (jobsArray.length === 0) {
+        favCounter.classList.add("no-active");
+    } else {
+        favCounter.classList.remove("no-active");
+    }
+
+    favCounter.innerHTML = jobsArray.length;
 };
 
 const toggleFavouriteMark = (button, data) => {
@@ -65,6 +82,7 @@ const removeJob = (data, jobsArray) => {
                     jobsArray.splice(i, 1);
                 }
             }
+            displayFavCounter(jobsArray);
 
             // Add a comentary when user removes all the items
             if (jobsArray.length === 0) {

@@ -1,34 +1,90 @@
-.job-description {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    gap: 10px;
-}
+.detail__container {
+    margin: 3rem 1rem;
+    padding: 2rem;
+    background-color: $hover-color;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
-.job-title {
-    font-size: 18px;
-}
+    border: 2px solid $border-color;
 
-.company-title {
-    font-size: 16px;
-}
+    border-radius: 2rem;
 
-.tag {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20px;
-    min-width: 30%;
-    text-align: center;
-    border-radius: 7px;
-    padding: 5px;
-    background-color: #b58c835c;
-    font-weight: 100;
-    font-size: 14px;
-    cursor: pointer;
-}
+    position: relative;
 
-.job-detail__header {
-    display: flex;
-    align-items: center;
+    .home-title {
+        font-size: 2rem;
+        font-weight: 100;
+        position: absolute;
+        top: -2.4rem;
+    }
+
+    .home-icon {
+        font-size: 1rem;
+        margin-left: 0.6rem;
+    }
+
+    .job-detail {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin: 1rem 0;
+
+        &__img {
+            border-radius: 50%;
+            width: 10rem;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+        }
+    }
+
+    .job-tags {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        &__tag {
+            font-weight: 100;
+            background-color: $tag-color;
+            width: 100%;
+            height: 3rem;
+            border-bottom-right-radius: 1.5rem;
+            border-top-left-radius: 1.5rem;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+                rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+        }
+    }
+
+    .job__title {
+        margin: 1rem 0;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    div {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 1rem 0;
+    }
+
+    ul {
+        margin: 1rem 0;
+    }
+
+    .job-description__link {
+        font-size: 2rem;
+        font-weight: 600;
+
+        &:hover {
+            color: rgb(64, 137, 149);
+        }
+    }
 }

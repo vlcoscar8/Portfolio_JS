@@ -22,10 +22,10 @@ const printFavouritesJobsPage = (jobsArray) => {
     favouriteContainer.innerHTML = jobsArray
         .map(
             (job) => `
-            <div id="${job.id}">
-            <div class="job-info">
+            <div  class="fav-job">
+            <div class="job-info" id="${job.id}">
                 <img src="${job.logo}" alt="" class="job-img"/>
-                <div>
+                <div class="job-info__content">
                   <h2>${job.title}</h2>
                   <h3>${job.company}</h3>
                   <div class="job-tags">
@@ -48,7 +48,10 @@ const printFavouritesJobsPage = (jobsArray) => {
                 </div>
               </div>
               <div class="job-btn-container">
-                <button class="remove-btn btn" id="${job.id}">Remove</button>
+              
+                <button class="remove-btn btn" id="${
+                    job.id
+                }"><i class="fa-solid fa-trash remove-icon"></i></button>
               </div>
             </div>
           `

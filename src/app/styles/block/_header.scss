@@ -3,26 +3,55 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    background-color: beige;
-    height: 50px;
-    padding: 10px;
+    background-color: $header-color;
 
-    .logo {
+    height: 5rem;
+    padding: 1rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    .title {
         display: flex;
         align-items: center;
+
+        color: $main-color;
     }
 
     .header-list {
         display: flex;
         list-style: none;
+        position: relative;
 
         li {
-            margin: 10px;
+            margin: 1rem;
             cursor: pointer;
+            color: black;
+            font-weight: 600;
+            font-size: 2rem;
         }
 
         li:hover {
             color: grey;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+
+            background-color: $fav-color;
+            color: white;
+            font-size: 1.5rem;
+
+            position: absolute;
+            right: 0.2rem;
+            top: -0.7rem;
         }
     }
 }
