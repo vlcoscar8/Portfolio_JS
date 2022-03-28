@@ -63,9 +63,9 @@ const insertHTMLfromData = (
     <div class="company__container">
     ${contentCompany}
     </div>
-    <div>
-        <button id="previous-btn-companies">Previous</button>
-        <button id="next-btn-companies">Next</button>
+    <div class="pagination">
+        <button id="previous-btn-companies"><i class="fa-solid fa-square-caret-left arrow"></i></button>
+        <button id="next-btn-companies"><i class="fa-solid fa-square-caret-right arrow"></i></button>
     </div>
   `;
 
@@ -100,7 +100,7 @@ const increasePaginationCompanies = (companiesNice, firstIndex, lastIndex) => {
     firstIndex = firstIndex + 15;
     lastIndex = lastIndex + 15;
 
-    let dataToPrint = companies.slice(firstIndex, lastIndex);
+    let dataToPrint = companiesNice.slice(firstIndex, lastIndex);
 
     insertHTMLfromData(dataToPrint, firstIndex, lastIndex, companiesNice);
 };
