@@ -26,12 +26,12 @@
     .job-detail {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 2rem;
         margin: 1rem 0;
 
         &__img {
-            border-radius: 50%;
-            width: 10rem;
+            @include image_company(7rem, 7rem);
         }
 
         &__title {
@@ -45,19 +45,7 @@
         gap: 2rem;
 
         &__tag {
-            font-weight: 100;
-            background-color: $tag-color;
-            width: 100%;
-            height: 3rem;
-            border-bottom-right-radius: 1.5rem;
-            border-top-left-radius: 1.5rem;
-            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
-                rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: capitalize;
+            @include tag;
         }
     }
 
@@ -67,6 +55,8 @@
 
     p {
         font-size: 1.4rem;
+        margin: 0.8rem 0;
+        color: white !important;
     }
 
     div {
@@ -77,6 +67,7 @@
 
     ul {
         margin: 1rem 0;
+        color: white !important;
     }
 
     .job-description__link {

@@ -12,6 +12,25 @@ a {
     color: inherit;
 }
 
+body {
+    background: $background-page-color;
+    color: white;
+}
+
+/// Repetitive styles
+
+.home-title {
+    @include home-title;
+}
+
+.home-icon {
+    @include home-icon;
+}
+
+.home-title-fav {
+    @include home-title-fav;
+}
+
 //// helpers
 .no-active {
     display: none !important;

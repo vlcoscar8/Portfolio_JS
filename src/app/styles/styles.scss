@@ -1,8 +1,8 @@
 /// Utilities
-@import "./utilities/_default-page.scss";
 @import "./utilities/_variables.scss";
-@import "./utilities/_typography.scss";
 @import "./utilities/_mixins.scss";
+@import "./utilities/_default-page.scss";
+@import "./utilities/_typography.scss";
 
 /// general styles
 @import "./block/_header.scss";
@@ -21,7 +21,3 @@
 /// Companies list and detail page styles
 @import "./block/company-pages/_company-detail.scss";
 @import "./block/company-pages/_company-page.scss";
-
-
-
-

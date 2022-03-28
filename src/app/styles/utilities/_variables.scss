@@ -1,58 +1,9 @@
 $header-color: #ffffff;
-
 $main-color: #0e162b;
-
 $hover-color: #0e162b47;
-
 $border-color: #242e45;
-
 $tag-color: #414cd3;
-
 $btn-next-color: #363c7b;
-
 $fav-color: #414cd3;
-
-body {
-    background: #060d20;
-    color: white;
-}
-
-.tag {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    height: 2rem;
-    min-width: 30%;
-    padding: 0.5rem;
-    border-bottom-right-radius: 1.5rem;
-    border-top-left-radius: 1.5rem;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
-    background: #414cd3;
-    color: white;
-
-    font-weight: 100;
-    font-size: 1.4rem;
-
-    cursor: pointer;
-}
-
-.home-title {
-    font-size: 2rem;
-    font-weight: 100;
-    position: absolute;
-    top: -2.4rem;
-}
-
-.home-icon {
-    font-size: 1rem;
-    margin-left: 0.6rem;
-}
-
-.home-title-fav {
-    font-size: 2rem;
-    font-weight: 100;
-    top: -2.4rem;
-}
+$company-color: #859ec9;
+$background-page-color: #060d20;

@@ -15,9 +15,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             background-color: $main-color;
             padding: 1rem;
-            cursor: pointer;
+
             border: 2px solid $border-color;
 
             border-bottom-left-radius: 3rem;
@@ -26,11 +27,22 @@
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
                 rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
+            cursor: pointer;
+
             transition: all 0.5s ease;
 
             &:hover {
                 transform: scale(1.02);
                 background: $hover-color;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+                color: $company-color;
             }
 
             .job-info {
@@ -40,14 +52,13 @@
                 width: 100%;
 
                 .job-img {
-                    width: 10rem;
-                    border-radius: 50%;
+                    @include image_company(7rem, 7rem);
                 }
 
                 &__content {
-                    width: 60%;
                     display: flex;
                     flex-direction: column;
+                    width: 60%;
                     gap: 1rem;
 
                     .job-tags {
@@ -66,9 +77,9 @@
                     color: inherit;
                     border: none;
                     padding: 0;
+                    outline: inherit;
                     font: inherit;
                     cursor: pointer;
-                    outline: inherit;
                 }
 
                 .remove-icon {
