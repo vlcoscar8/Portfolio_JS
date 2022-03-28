@@ -15,6 +15,8 @@ const fetchJobsFromCompanies = async (company) => {
             jobTitle: job.title,
             category: job.category,
             location: job.candidate_required_location,
+            description: job.description,
+            url: job.url,
         };
         jobsArrayFromCompany.push(jobFromCompany);
     });

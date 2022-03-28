@@ -19,11 +19,22 @@ class CompanyClass {
 }
 
 class CompanyDetailClass extends CompanyClass {
-    constructor(id, name, image, jobTitle, category, location) {
+    constructor(
+        id,
+        name,
+        image,
+        jobTitle,
+        category,
+        location,
+        description,
+        url
+    ) {
         super(id, name, image);
         this.jobTitle = jobTitle;
         this.category = category;
         this.location = location;
+        this.description = description;
+        this.url = url;
     }
 
     getJobTitle() {
@@ -36,6 +47,14 @@ class CompanyDetailClass extends CompanyClass {
 
     getLocation() {
         return this.location;
+    }
+
+    getDescription() {
+        return this.description;
+    }
+
+    getUrl() {
+        return this.url;
     }
 }
 
