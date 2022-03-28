@@ -41,6 +41,10 @@ const setCompanyDetailPage = () => {
             .getElementById("pagination-container")
             .classList.remove("pagination");
     }
+
+    if (document.getElementById("detail-container")) {
+        document.getElementById("detail-container").remove();
+    }
 };
 
 const setCompanyPage = () => {

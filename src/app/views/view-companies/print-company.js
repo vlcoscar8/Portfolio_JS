@@ -13,14 +13,30 @@ const printCompany = (data) => {
         companies.push(jobData);
     });
 
+    let companyArr = [...new Set(companies.map((el) => el.name))];
+
+    const companiesNice = companies.filter((company) => {
+        for (let i = 0; i < companyArr.length; i++) {
+            if (companyArr.includes(company.name)) {
+                companyArr.splice(i, 1);
+                return company;
+            }
+        }
+    });
+
     let firstIndex = 0;
     let lastIndex = 15;
-    let dataToPrint = companies.slice(firstIndex, lastIndex);
+    let dataToPrint = companiesNice.slice(firstIndex, lastIndex);
 
-    insertHTMLfromData(dataToPrint, firstIndex, lastIndex, companies);
+    insertHTMLfromData(dataToPrint, firstIndex, lastIndex, companiesNice);
 };
 
-const insertHTMLfromData = (dataToPrint, firstIndex, lastIndex, companies) => {
+const insertHTMLfromData = (
+    dataToPrint,
+    firstIndex,
+    lastIndex,
+    companiesNice
+) => {
     const companyContainer = document.getElementById("company-container");
     companyContainer.classList.add("company__page");
 
@@ -66,11 +82,11 @@ const insertHTMLfromData = (dataToPrint, firstIndex, lastIndex, companies) => {
     }
 
     document.getElementById("next-btn-companies").onclick = () => {
-        increasePaginationCompanies(companies, firstIndex, lastIndex);
+        increasePaginationCompanies(companiesNice, firstIndex, lastIndex);
     };
 
     document.getElementById("previous-btn-companies").onclick = () => {
-        reducePaginationCompanies(companies, firstIndex, lastIndex);
+        reducePaginationCompanies(companiesNice, firstIndex, lastIndex);
     };
 
     const companyTag = document.querySelectorAll(".offers-btn");
@@ -80,22 +96,22 @@ const insertHTMLfromData = (dataToPrint, firstIndex, lastIndex, companies) => {
     });
 };
 
-const increasePaginationCompanies = (companies, firstIndex, lastIndex) => {
+const increasePaginationCompanies = (companiesNice, firstIndex, lastIndex) => {
     firstIndex = firstIndex + 15;
     lastIndex = lastIndex + 15;
 
     let dataToPrint = companies.slice(firstIndex, lastIndex);
 
-    insertHTMLfromData(dataToPrint, firstIndex, lastIndex, companies);
+    insertHTMLfromData(dataToPrint, firstIndex, lastIndex, companiesNice);
 };
 
-const reducePaginationCompanies = (companies, firstIndex, lastIndex) => {
+const reducePaginationCompanies = (companiesNice, firstIndex, lastIndex) => {
     firstIndex = firstIndex - 15;
     lastIndex = lastIndex - 15;
 
-    let dataToPrint = companies.slice(firstIndex, lastIndex);
+    let dataToPrint = companiesNice.slice(firstIndex, lastIndex);
 
-    insertHTMLfromData(dataToPrint, firstIndex, lastIndex, companies);
+    insertHTMLfromData(dataToPrint, firstIndex, lastIndex, companiesNice);
 };
 
 export { printCompany };
