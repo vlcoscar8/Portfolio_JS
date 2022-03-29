@@ -23,15 +23,21 @@ header {
     .header-list {
         display: flex;
         justify-content: end;
+        align-items: center;
+
         gap: 2rem;
 
         list-style: none;
 
         position: relative;
 
-        width: 40%;
+        width: 50%;
         padding: 0;
         margin-right: 3rem;
+
+        @include tablet {
+            margin-right: 6rem;
+        }
 
         li {
             color: black;

@@ -44,6 +44,17 @@ const setCompanyDetailPage = () => {
     if (document.getElementById("detail-container")) {
         document.getElementById("detail-container").remove();
     }
+    if (document.getElementById("detail-container")) {
+        document.getElementById("detail-container").remove();
+    }
+    if (document.getElementById("detail-container")) {
+        document.getElementById("detail-container").remove();
+    }
+    if (document.getElementById("favourite-container")) {
+        document
+            .getElementById("favourite-container")
+            .classList.add("no-active");
+    }
 };
 
 const setCompanyPage = () => {
@@ -84,6 +95,12 @@ const setCompanyPage = () => {
     if (document.getElementById("jobs-container")) {
         document.getElementById("jobs-container").remove();
     }
+
+    if (document.getElementById("favourite-container")) {
+        document
+            .getElementById("favourite-container")
+            .classList.add("no-active");
+    }
 };
 
 const setFavouriteJobs = () => {
@@ -98,6 +115,10 @@ const setFavouriteJobs = () => {
         document
             .getElementById("favourite-container")
             .classList.remove("no-active");
+    }
+
+    if (document.getElementById("company-container")) {
+        document.getElementById("company-container").classList.add("no-active");
     }
 };
 
@@ -158,6 +179,9 @@ const setHomePage = () => {
         document
             .getElementById("pagination-container")
             .classList.remove("no-active");
+        document
+            .getElementById("pagination-container")
+            .classList.add("pagination");
     }
     if (document.getElementById("filters-container")) {
         document
@@ -176,6 +200,10 @@ const setHomePage = () => {
 
     if (document.getElementById("company-detail")) {
         document.getElementById("company-detail").classList.add("no-active");
+    }
+
+    if (document.getElementById("pagination-number")) {
+        document.getElementById("pagination-number").innerHTML = 1;
     }
 };
 

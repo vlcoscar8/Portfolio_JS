@@ -22,10 +22,22 @@
 
         text-align: center;
 
+        .job-offers__title {
+            font-size: 2rem;
+
+            @include tablet {
+                font-size: 2.2rem;
+            }
+        }
+
         .company-detail__header {
             display: flex;
             align-items: center;
-
+            justify-content: center;
+            width: 90vw;
+            border-bottom: 2px solid $border-color;
+            margin-bottom: 1rem;
+            padding-bottom: 2rem;
             gap: 2rem;
 
             .company-logo {
@@ -38,9 +50,9 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: 100vw;
-
             gap: 1rem;
+
+            width: 100vw;
             margin-top: 2rem;
 
             @include tablet {
@@ -94,6 +106,10 @@
                         @include tag;
                         font-size: 1.6rem;
                     }
+                }
+
+                .offers-btn {
+                    @include btn-company-detail(1.6rem);
                 }
             }
         }

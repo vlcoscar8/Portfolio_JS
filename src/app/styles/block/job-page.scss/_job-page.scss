@@ -55,6 +55,7 @@
 
         &__tag {
             @include tag;
+            font-size: 1.5rem !important;
 
             @include tablet {
                 font-size: 2rem;

@@ -1,7 +1,6 @@
 import { fetchJobsFromCompanies } from "../../api/call-to-api-company";
 import { CompanyDetailClass } from "../../model/company";
-import { detailListener } from "../../listeners/detail-listener";
-import { getData } from "../../api/call-to-api-list";
+
 const showCompanyDetail = async (tag) => {
     console.log(tag.parentNode);
     window.location.hash = "#companyDetail";
@@ -18,6 +17,7 @@ const showCompanyDetail = async (tag) => {
           <img src="${companyData[0].logo}" class="company-logo"/>
           <h2>${companyData[0].name}</h2>
         </div>
+        <div class="job-offers__title">Job offers:</div>
         <div id="company-jobs" class="company-jobs__container"></div>
     `;
 
@@ -49,19 +49,26 @@ const printCompanyJob = (job) => {
           <h4 class="tag">${companyDetail.getCategory()}</h4>
           <h4 class="tag">${companyDetail.getLocation()}</h4>
         </div>
+        <div class="btn-description">
+        <button class="offers-btn">See description</button>
+        </div>
+       
       `;
 
     jobTag.innerHTML = jobDetailContent;
 
     document.getElementById("company-jobs").appendChild(jobTag);
 
-    jobTag.addEventListener("click", () => {
-        window.location.hash = "detail";
+    const btnDescription = document.querySelectorAll(".btn-description");
 
-        const detailContainer = document.createElement("div");
-        detailContainer.setAttribute("id", "detail-container");
-        detailContainer.classList.add("detail__container");
-        detailContainer.innerHTML = `
+    btnDescription.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            window.location.hash = "detail";
+            window.scrollTo(0, 0);
+            const detailContainer = document.createElement("div");
+            detailContainer.setAttribute("id", "detail-container");
+            detailContainer.classList.add("detail__container");
+            detailContainer.innerHTML = `
           <div>
             <a href="#home" class="home-title">Home<i class="fa-solid fa-angles-right home-icon"></i></a>
           </div>
@@ -79,8 +86,8 @@ const printCompanyJob = (job) => {
             <p class="job-description__title">${companyDetail.getDescription()}</p>
             <a href="${companyDetail.getUrl()}" target="_blank" class="job-description__link">Visit the offer</a>
         `;
-
-        document.body.appendChild(detailContainer);
+            document.body.appendChild(detailContainer);
+        });
     });
 };
 

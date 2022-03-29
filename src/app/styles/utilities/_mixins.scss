@@ -46,3 +46,17 @@
     font-weight: 100;
     top: -2.4rem;
 }
+
+@mixin btn-company-detail($font-size) {
+    font-size: $font-size;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: all 0.1s;
+
+    &:hover {
+        background-color: white;
+        color: $main-color;
+        font-weight: 600;
+    }
+}
