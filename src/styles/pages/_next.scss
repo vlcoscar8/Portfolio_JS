@@ -5,15 +5,170 @@
 
     .next {
         width: 100vw;
-        height: 130vh;
-        color: white;
-        font-size: 10rem;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        text-align: center;
+        gap: 2rem;
         padding: 10rem;
-        transform: translateX(100vw);
+        transform: translateX(60vw);
         transition: transform 2s ease;
+        position: relative;
+
+        &__style {
+            content: "";
+            width: 0.2rem;
+            height: 92%;
+            position: absolute;
+            background-color: $contrastColor;
+            left: 30rem;
+            z-index: 0;
+        }
+
+        &__arrow {
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+            margin-top: 1rem;
+            gap: 1rem;
+            margin-left: 12rem;
+            cursor: pointer;
+
+            &--text {
+                color: white;
+                font-size: 1.3rem;
+                font-family: $normalFont;
+            }
+
+            .arrow {
+                font-size: 2rem;
+                color: white;
+            }
+        }
+
+        &__title {
+            align-self: flex-start;
+            color: white;
+            font-family: $normalFont;
+            font-size: 2rem;
+            margin-left: 25rem;
+            margin-top: 3rem;
+        }
+
+        &__description {
+            position: relative;
+            height: 40rem;
+
+            &--content {
+                position: absolute;
+                top: 5rem;
+                left: -42rem;
+                width: 40rem;
+                padding: 2rem 10rem;
+                z-index: 2;
+                background: linear-gradient(0.25turn, #202020, #656565d3);
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+                    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+                p {
+                    color: white;
+                    font-family: $normalFont;
+                    font-size: 1.5rem;
+                }
+            }
+
+            &--image {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                width: 44rem;
+                height: 33rem;
+                position: absolute;
+                top: -4rem;
+                left: 1rem;
+
+                img {
+                    height: 80%;
+                }
+            }
+        }
+
+        &__title--stack {
+            color: white;
+            font-family: $normalFont;
+            font-size: 2rem;
+            align-self: flex-start;
+            margin-left: 25rem;
+            margin-top: -5rem;
+        }
+
+        &__stack {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 5rem;
+
+            &--card {
+                @include card(7rem, 7rem);
+
+                .icon {
+                    width: 70%;
+                    height: 70%;
+                }
+
+                p {
+                    font-family: $normalFont;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        &__title--code {
+            color: white;
+            font-family: $normalFont;
+            font-size: 2rem;
+            align-self: flex-start;
+            margin-left: 25rem;
+        }
+
+        &__code {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            padding: 3rem 10rem;
+            width: 70vw;
+
+            &--card {
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                gap: 3rem;
+
+                img {
+                    width: 30rem;
+                    z-index: 1;
+                }
+
+                .text-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem 5rem;
+                    background: linear-gradient(0.25turn, #656565d3, #202020);
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+                        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+                    p {
+                        color: white;
+                        font-size: 1.5rem;
+                        font-family: $normalFont;
+                    }
+                }
+            }
+        }
     }
 }

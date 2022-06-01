@@ -3,7 +3,7 @@ export const projectsData = [
         id: 1,
         title: "Job finder web",
         description:
-            "A web where you can find the last job offers from Remotive Api. With a filter options, pagination and list of favourites jobs.",
+            "A web where you can find the last job offers from Remotive Api. With a filter options, pagination and list of favourites jobs. This is the first project I've done with Javascript calling a public Api and also I've practised Object Oriented Programming",
         stack: [
             {
                 name: "Javascript",
@@ -114,7 +114,7 @@ export const projectsData = [
         id: 3,
         title: "Recipe social media app",
         description:
-            "A recipe social media web, where the users can create their own recipes and post on the web, a personal account view where the user can update his personal info and also a backend api created with all the endpoints to get/post and delete the info.",
+            "A recipe social media web, where the users can create their own recipes and post on the web, a personal account view where the user can update his personal info and also a backend api created with all the endpoints to get/post and delete the info. This project was done to practise the user register flow with JWT",
         stack: [
             {
                 name: "Javascript",
