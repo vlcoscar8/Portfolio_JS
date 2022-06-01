@@ -9,8 +9,8 @@ html {
 }
 
 body {
-    overflow-x: hidden;
     @include backgroundImage;
+    overflow-x: hidden;
 }
 
 a {
@@ -42,4 +42,12 @@ main {
     visibility: hidden;
     transition: opacity 3s ease-out, transform 3s ease-out;
     will-change: opacity, visibility;
+}
+
+.left {
+    transform: translateX(-100vw);
+}
+
+.center {
+    transform: translateX(-42vw) !important;
 }

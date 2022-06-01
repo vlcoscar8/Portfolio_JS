@@ -1,3 +1,5 @@
+import { printDetailProject } from "../controller/printDetailProject.js";
+
 const printProjects = () => {
     const projects$ = document.getElementById("projects");
 
@@ -20,6 +22,29 @@ const printProjects = () => {
         <button class="btn-home" id="pro-card" ><a href="https://github.com/vlcoscar8" target="blank">Find more on Github</a></button>
       </div>
     `;
+
+    const scrollHorizontal = () => {
+        const cards$ = document.querySelectorAll("#pro-card");
+        const next$ = document.getElementById("next");
+
+        console.log(next$);
+        cards$.forEach((el) =>
+            el.addEventListener("click", () => {
+                next$.classList.add("center");
+                cards$.forEach((el) => el.classList.add("left"));
+
+                //Get the id project from the image div class and pass it to the function to print in next slide the info from the project stored in data
+                const projectId = parseInt(
+                    el.lastChild.previousSibling
+                        .getAttribute("class")
+                        .split("-")[1][1]
+                );
+                printDetailProject(projectId);
+            })
+        );
+    };
+
+    scrollHorizontal();
 };
 
 export { printProjects };
