@@ -2,7 +2,12 @@ import { projectsData } from "../data/projects.data.js";
 
 const printDetailProject = (id) => {
     const projectData = projectsData.filter((project) => project.id === id);
-    console.log(projectData);
+
+    const next$ = document.getElementById("next");
+
+    next$.innerHTML = `
+      
+    `;
 };
 
 export { printDetailProject };

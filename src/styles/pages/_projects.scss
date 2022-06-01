@@ -83,6 +83,7 @@
 
         .btn-home {
             @include btnHome(12rem, 4rem);
+            margin-top: 3rem;
         }
     }
 }

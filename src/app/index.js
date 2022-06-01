@@ -35,12 +35,8 @@ const observer = () => {
         });
     });
 
-    let options = {
-        margin: "-20rem",
-    };
-
-    proCards$.forEach((el) => io.observe(el, options));
-    contact$.forEach((el) => io.observe(el, options));
+    proCards$.forEach((el) => io.observe(el));
+    contact$.forEach((el) => io.observe(el));
 
     io.observe(hero$);
     io.observe(aboutFirst$);

@@ -3,8 +3,8 @@ const printHero = () => {
 
     hero$.innerHTML = `
       <div class="hero__title">
-        <p class="hero__title--name">I'm <span class="hero__title--name-span">Oscar Perez Romero</span></p>
-        <p class="hero__title--subname">Junior <span class="hero__title--subname-mearn">MEARN</span> full stack developer</p>
+        <h1 class="hero__title--name">I'm <span class="hero__title--name-span">Oscar Perez Romero</span></h1>
+        <h2 class="hero__title--subname">Junior <span class="hero__title--subname-mearn">MEARN</span> full stack developer</h2>
         <button class="btn-home"><a href="#contact">Contact Me</a></button>
       </div>
       <div class="hero__social">

@@ -38,7 +38,7 @@ main {
 
 .no-show {
     opacity: 0;
-    transform: translateY(30vh);
+    transform: translateY(25vh);
     visibility: hidden;
     transition: opacity 3s ease-out, transform 3s ease-out;
     will-change: opacity, visibility;
