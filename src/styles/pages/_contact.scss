@@ -1,0 +1,90 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 10rem;
+    gap: 2rem;
+    height: 80vh;
+    width: 70vw;
+
+    &__title {
+        font-family: $titleFont;
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        color: white;
+
+        &::before {
+            @include separation;
+        }
+
+        &::after {
+            @include separation;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 80%;
+        gap: 3rem;
+        margin-top: 7rem;
+
+        &--top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 2rem;
+            padding: 1rem 3rem;
+            width: 20rem;
+            background-color: $backgroundColorLight;
+            box-sizing: border-box;
+
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+                rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+            .icon {
+                font-size: 1.4rem;
+                color: white;
+            }
+
+            p {
+                font-family: $normalFont;
+                font-size: 1.2rem;
+                color: $contrastColor;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 10rem;
+
+        .icon-social {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        &::before {
+            @include separation;
+        }
+
+        &::after {
+            @include separation;
+        }
+    }
+}

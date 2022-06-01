@@ -1,0 +1,105 @@
+@mixin btnHome($width, $height) {
+    width: $width;
+    height: $height;
+    color: $contrastColor;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 0.2rem solid $contrastColor;
+    cursor: pointer;
+
+    &:hover {
+        color: $backgroundColor;
+        background-color: $contrastColor;
+        transition: all 0.5s ease;
+    }
+}
+
+@mixin btnCommon($width, $height) {
+    width: $width;
+    height: $height;
+    color: $backgroundColor;
+    background-color: $contrastColor;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin card($width, $height) {
+    width: $width;
+    height: $height;
+    background-color: $backgroundColorLight;
+    background: linear-gradient(0.25turn, #353535c9, #6565654f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+    &:hover {
+        background-color: $contrastColorLight;
+    }
+}
+
+@mixin arrowCard($width, $height, $background) {
+    position: relative;
+    background: $background;
+    width: $width;
+    height: $height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: $width;
+        z-index: 1;
+        border: solid calc($height/2) transparent;
+        border-right-color: $background;
+        transform: rotate(180deg);
+    }
+}
+
+@mixin backgroundImage {
+    background-image: url("https://wallpaperaccess.com/full/5651992.png");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin imageBlur($imageUrl, $top) {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url($imageUrl);
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: $top;
+        transform: translateX(1rem);
+        left: 10%;
+        right: 0;
+        bottom: 0;
+        -webkit-mask-image: linear-gradient(to right, transparent, #fff);
+        mask-image: linear-gradient(to right, transparent, rgb(255, 255, 255));
+    }
+}
+
+@mixin separation {
+    content: "";
+    width: 30rem;
+    height: 0.1rem;
+    background-color: $contrastColor;
+}

@@ -1,0 +1,68 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    &__title {
+        position: absolute;
+        width: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1rem;
+        font-family: $normalFont;
+        left: 10rem;
+        top: 10rem;
+
+        &--name {
+            color: white;
+            font-size: 5rem;
+
+            &-span {
+                color: $contrastColor;
+            }
+        }
+
+        &--subname {
+            color: white;
+            font-size: 3rem;
+
+            &-mearn {
+                color: $contrastColor;
+            }
+        }
+
+        .btn-home {
+            @include btnHome(10rem, 4rem);
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    &__social {
+        position: absolute;
+        right: 7rem;
+        top: 25rem;
+
+        ul::before {
+            content: "";
+            width: 0.4rem;
+            height: 8rem;
+            background-color: $contrastColor;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            li a i {
+                font-size: 2.6rem;
+                color: white;
+            }
+        }
+    }
+}

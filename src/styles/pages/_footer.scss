@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15rem 0;
+    text-align: center;
+
+    p {
+        font-family: $titleFont;
+        color: $contrastColor;
+        font-size: 4rem;
+    }
+}

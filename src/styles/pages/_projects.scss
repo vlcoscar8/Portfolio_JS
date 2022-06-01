@@ -1,0 +1,86 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 9rem;
+    width: 70vw;
+    gap: 2rem;
+
+    &__title {
+        font-family: $titleFont;
+        font-size: 4rem;
+        align-self: flex-start;
+        color: white;
+        margin-left: 4rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem;
+
+        &--card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: transparent;
+            border: 1px solid black;
+            width: 90%;
+            height: 10rem;
+            padding-left: 5rem;
+            background-color: $backgroundColorLight;
+            background: linear-gradient(
+                0.25turn,
+                #141414,
+                #6565654f,
+                #b5b5b500
+            );
+            clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
+            cursor: pointer;
+
+            .img-01 {
+                @include imageBlur(
+                    "https://res.cloudinary.com/oscar-perez/image/upload/v1654077750/RecipeAssets/FoodCategory/fob_finder_app_olkx9y.png",
+                    0
+                );
+            }
+
+            .img-02 {
+                @include imageBlur(
+                    "https://res.cloudinary.com/oscar-perez/image/upload/v1654077754/RecipeAssets/FoodCategory/sneakers_ecommerce_lla1yx.png",
+                    -40%
+                );
+            }
+
+            .img-03 {
+                @include imageBlur(
+                    "https://res.cloudinary.com/oscar-perez/image/upload/v1654086321/RecipeAssets/FoodCategory/recipe_o4yatx.png",
+                    0
+                );
+            }
+
+            p {
+                font-family: $normalFont;
+                font-size: 1.4rem;
+                color: white;
+            }
+
+            &:hover {
+                background: linear-gradient(
+                    -0.1turn,
+                    #141414,
+                    #4848484f,
+                    $contrastColorBlur
+                );
+            }
+        }
+
+        .btn-home {
+            @include btnHome(12rem, 4rem);
+        }
+    }
+}

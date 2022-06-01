@@ -1,0 +1,79 @@
+.about {
+    color: white;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10rem 0;
+
+    &__title {
+        &--title {
+            font-family: $titleFont;
+            font-size: 4rem;
+            align-self: flex-start;
+        }
+
+        &--content {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            align-self: flex-start;
+
+            p {
+                font-family: $normalFont;
+                max-width: 80ch;
+                font-size: 1.5rem;
+
+                span {
+                    color: $contrastColor;
+                }
+            }
+        }
+
+        &--content::before {
+            content: "";
+            margin-top: 0.5rem;
+            width: 5rem;
+            height: 0.2rem;
+            background-color: $contrastColor;
+        }
+    }
+
+    &__skills {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 6rem;
+
+        &--title {
+            align-self: center;
+            font-size: 3.4rem;
+            font-family: $titleFont;
+            color: white;
+        }
+
+        &--cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            .card {
+                @include card(9rem, 9rem);
+
+                .icon {
+                    width: 70%;
+                    height: 70%;
+                }
+
+                p {
+                    font-family: $normalFont;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
