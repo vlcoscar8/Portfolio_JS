@@ -27,7 +27,6 @@ const printProjects = () => {
         const cards$ = document.querySelectorAll("#pro-card");
         const next$ = document.getElementById("next");
 
-        console.log(next$);
         cards$.forEach((el) =>
             el.addEventListener("click", () => {
                 next$.classList.add("center");

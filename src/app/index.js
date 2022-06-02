@@ -22,7 +22,6 @@ const observer = () => {
     const proCards$ = document.querySelectorAll("#pro-card");
     const contact$ = document.querySelectorAll("#contact-id");
     const footer$ = document.getElementById("footer");
-    const next$ = document.querySelectorAll("#next-io");
 
     const io = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -38,7 +37,6 @@ const observer = () => {
 
     proCards$.forEach((el) => io.observe(el));
     contact$.forEach((el) => io.observe(el));
-    next$.forEach((el) => io.observe(el));
 
     io.observe(hero$);
     io.observe(aboutFirst$);

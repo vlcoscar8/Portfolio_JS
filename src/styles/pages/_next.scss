@@ -12,7 +12,6 @@
         padding: 10rem;
         transform: translateX(60vw);
         transition: transform 2s ease;
-        position: relative;
 
         &__style {
             content: "";
@@ -30,17 +29,17 @@
             align-self: flex-start;
             margin-top: 1rem;
             gap: 1rem;
-            margin-left: 12rem;
+            margin-left: 10rem;
             cursor: pointer;
 
             &--text {
                 color: white;
-                font-size: 1.3rem;
+                font-size: 1.4rem;
                 font-family: $normalFont;
             }
 
             .arrow {
-                font-size: 2rem;
+                font-size: 2.3rem;
                 color: white;
             }
         }
@@ -90,6 +89,10 @@
 
                 img {
                     height: 80%;
+                }
+
+                .button-vercel {
+                    @include btnHome(14rem, 5rem);
                 }
             }
         }
@@ -147,8 +150,9 @@
                 align-items: start;
                 justify-content: center;
                 gap: 3rem;
+                position: relative;
 
-                img {
+                .image-pop {
                     width: 30rem;
                     z-index: 1;
                 }
