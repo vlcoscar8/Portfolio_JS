@@ -22,6 +22,10 @@
             background-color: $contrastColor;
             left: 30rem;
             z-index: 0;
+
+            @include phone {
+                left: 8rem;
+            }
         }
 
         &__arrow {
@@ -32,6 +36,11 @@
             gap: 1rem;
             margin-left: 10rem;
             cursor: pointer;
+
+            @include phone {
+                margin-left: 1rem;
+                margin-top: 5rem;
+            }
 
             &--text {
                 color: white;
@@ -52,11 +61,20 @@
             font-size: 2rem;
             margin-left: 25rem;
             margin-top: 3rem;
+
+            @include phone {
+                margin-left: 1rem;
+            }
         }
 
         &__description {
             position: relative;
             height: 40rem;
+
+            @include phone {
+                display: flex;
+                flex-direction: column;
+            }
 
             &--content {
                 position: absolute;
@@ -68,6 +86,13 @@
                 background: linear-gradient(0.25turn, #202020, #656565d3);
                 box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
                     rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+                @include phone {
+                    position: relative;
+                    width: 85vw;
+                    left: -3rem;
+                    padding: 2rem;
+                }
 
                 p {
                     color: white;
@@ -88,12 +113,26 @@
                 top: -4rem;
                 left: 1rem;
 
+                @include phone {
+                    position: relative;
+                    left: -6rem;
+                    top: 4rem;
+                }
+
                 img {
                     height: 80%;
+
+                    @include phone {
+                        width: 85vw;
+                    }
                 }
 
                 .button-vercel {
                     @include btnHome(14rem, 5rem);
+
+                    @include phone {
+                        @include btnHome(25rem, 7rem);
+                    }
                 }
             }
         }
@@ -105,6 +144,11 @@
             align-self: flex-start;
             margin-left: 25rem;
             margin-top: -5rem;
+
+            @include phone {
+                margin-left: 0;
+                margin-top: 7rem;
+            }
         }
 
         &__stack {
@@ -114,17 +158,33 @@
             gap: 1rem;
             padding: 5rem;
 
+            @include phone {
+                padding: 2rem;
+                margin-left: -10rem;
+                flex-wrap: wrap;
+                max-width: 81vw;
+            }
+
             &--card {
                 @include card(7rem, 7rem);
 
                 .icon {
                     width: 70%;
                     height: 70%;
+
+                    @include phone {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 p {
                     font-family: $normalFont;
                     font-size: 1.8rem;
+
+                    @include phone {
+                        display: none;
+                    }
                 }
             }
         }
@@ -135,6 +195,11 @@
             font-size: 2rem;
             align-self: flex-start;
             margin-left: 25rem;
+
+            @include phone {
+                margin-left: 0;
+                margin-top: 3rem;
+            }
         }
 
         &__code {
@@ -153,9 +218,18 @@
                 gap: 3rem;
                 position: relative;
 
+                @include phone {
+                    flex-direction: column-reverse;
+                }
+
                 .image-pop {
                     width: 30rem;
                     z-index: 1;
+
+                    @include phone {
+                        width: 90vw;
+                        margin-left: -7rem;
+                    }
                 }
 
                 .text-container {
@@ -165,6 +239,10 @@
                     width: 60%;
                     justify-content: start;
                     gap: 3rem;
+
+                    @include phone {
+                        width: 85vw;
+                    }
 
                     &__content {
                         display: flex;
@@ -179,6 +257,12 @@
                         );
                         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
                             rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+                        @include phone {
+                            margin-left: -8rem;
+                            width: 80%;
+                        }
+
                         p {
                             color: white;
                             font-size: 1.5rem;
@@ -193,12 +277,21 @@
                         align-items: flex-start;
                         justify-content: start;
 
+                        @include phone {
+                            margin-left: -5rem;
+                            width: 95vw;
+                        }
+
                         &--detail {
                             display: flex;
                             flex-direction: column;
                             gap: 0.5rem;
                             padding: 0 4rem;
                             position: relative;
+
+                            @include phone {
+                                margin-top: 2rem;
+                            }
 
                             &::after {
                                 content: "";
@@ -216,12 +309,20 @@
                                 font-size: 1.1rem;
                                 font-family: $normalFont;
                                 color: $contrastColor;
+
+                                @include phone {
+                                    font-size: 1.6rem;
+                                }
                             }
 
                             .function-desc {
                                 font-size: 1.1rem;
                                 font-family: $normalFont;
                                 color: white;
+
+                                @include phone {
+                                    font-size: 1.4rem;
+                                }
                             }
                         }
                     }
@@ -231,6 +332,11 @@
 
         .btn__git {
             @include btnHome(22rem, 4rem);
+
+            @include phone {
+                @include btnHome(85vw, 7rem);
+                margin-left: -12rem;
+            }
         }
     }
 }

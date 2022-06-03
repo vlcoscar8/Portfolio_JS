@@ -7,6 +7,10 @@
     border: 0.2rem solid $contrastColor;
     cursor: pointer;
 
+    @include phone {
+        font-size: 2rem;
+    }
+
     &:hover {
         color: $backgroundColor;
         background-color: $contrastColor;
@@ -28,6 +32,10 @@
     color: white;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
         rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+    @include phone {
+        padding: 2rem;
+    }
 
     &:hover {
         background-color: $contrastColorLight;
@@ -71,6 +79,10 @@
     width: 70%;
     height: 100%;
 
+    @include phone {
+        width: 80%;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -84,6 +96,10 @@
         bottom: 0;
         -webkit-mask-image: linear-gradient(to right, transparent, #fff);
         mask-image: linear-gradient(to right, transparent, rgb(255, 255, 255));
+
+        @include phone {
+            border-radius: 0.5rem;
+        }
     }
 }
 
@@ -92,4 +108,9 @@
     width: 30rem;
     height: 0.1rem;
     background-color: $contrastColor;
+
+    @include phone {
+        width: 7rem;
+        height: 0.2rem;
+    }
 }

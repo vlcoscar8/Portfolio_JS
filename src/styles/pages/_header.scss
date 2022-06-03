@@ -32,6 +32,11 @@
         font-family: $normalFont;
         color: white;
 
+        @include phone {
+            gap: 1rem;
+            margin-right: 3rem;
+        }
+
         li {
             cursor: pointer;
             display: inline-block;

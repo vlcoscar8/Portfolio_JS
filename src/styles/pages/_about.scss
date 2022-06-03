@@ -8,7 +8,15 @@
     gap: 2rem;
     padding: 10rem 0 5rem 0;
 
+    @include phone {
+        width: 85vw;
+    }
+
     &__title {
+        @include phone {
+            position: relative;
+        }
+
         &--title {
             font-family: $titleFont;
             font-size: 4rem;
@@ -21,6 +29,10 @@
             align-items: flex-start;
             align-self: flex-start;
 
+            @include phone {
+                margin-top: 2rem;
+            }
+
             p {
                 font-family: $normalFont;
                 max-width: 80ch;
@@ -28,6 +40,10 @@
 
                 span {
                     color: $contrastColor;
+                }
+
+                @include phone {
+                    text-align: start;
                 }
             }
         }
@@ -38,6 +54,13 @@
             width: 5rem;
             height: 0.2rem;
             background-color: $contrastColor;
+
+            @include phone {
+                width: 30vw;
+                align-self: center;
+                position: absolute;
+                top: 5rem;
+            }
         }
     }
 
@@ -64,14 +87,27 @@
             .card {
                 @include card(9rem, 9rem);
 
+                @include phone {
+                    @include card(3rem, 3rem);
+                }
+
                 .icon {
                     width: 70%;
                     height: 70%;
+
+                    @include phone {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 p {
                     font-family: $normalFont;
                     font-size: 1.8rem;
+
+                    @include phone {
+                        display: none;
+                    }
                 }
             }
         }
@@ -83,6 +119,10 @@
         gap: 2rem;
         margin-top: 6rem;
         width: 70vw;
+
+        @include phone {
+            width: 85vw;
+        }
 
         &--title {
             align-self: center;
@@ -113,12 +153,23 @@
                 border-radius: 0.8rem;
                 cursor: pointer;
 
+                @include phone {
+                    width: 90%;
+                    height: 8rem;
+                    padding: 1rem 2rem;
+                    gap: 2rem;
+                }
+
                 &:hover {
                     background-color: $contrastColorLight;
                 }
 
                 &__img {
                     width: 15%;
+
+                    @include phone {
+                        width: 22%;
+                    }
                 }
 
                 &__info {
@@ -128,16 +179,28 @@
                     justify-content: center;
                     padding: 1rem;
 
+                    @include phone {
+                        width: 60vw;
+                    }
+
                     &--title {
                         font-family: $normalFont;
                         font-size: 1.2rem;
                         color: $contrastColor;
+
+                        @include phone {
+                            font-size: 1.6rem;
+                        }
                     }
 
                     &--time {
                         font-family: $normalFont;
                         font-size: 1rem;
                         color: gray;
+
+                        @include phone {
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }

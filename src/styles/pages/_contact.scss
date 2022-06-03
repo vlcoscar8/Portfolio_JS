@@ -8,6 +8,10 @@
     height: 80vh;
     width: 70vw;
 
+    @include phone {
+        width: 85vw;
+    }
+
     &__title {
         font-family: $titleFont;
         font-size: 4rem;
@@ -15,6 +19,12 @@
         align-items: center;
         gap: 3rem;
         color: white;
+
+        @include phone {
+            width: 95vw;
+            font-size: 3rem;
+            justify-content: center;
+        }
 
         &::before {
             @include separation;
@@ -34,11 +44,19 @@
         gap: 3rem;
         margin-top: 7rem;
 
+        @include phone {
+            width: 100%;
+        }
+
         &--top {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 3rem;
+
+            @include phone {
+                flex-direction: column;
+            }
         }
 
         .card {
@@ -50,19 +68,30 @@
             width: 20rem;
             background-color: $backgroundColorLight;
             box-sizing: border-box;
-
             box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
                 rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+            @include phone {
+                width: 85vw;
+            }
 
             .icon {
                 font-size: 1.4rem;
                 color: white;
+
+                @include phone {
+                    font-size: 2rem;
+                }
             }
 
             p {
                 font-family: $normalFont;
                 font-size: 1.2rem;
                 color: $contrastColor;
+
+                @include phone {
+                    font-size: 1.8rem;
+                }
             }
         }
     }
@@ -74,9 +103,17 @@
         gap: 3rem;
         margin-top: 8rem;
 
+        @include phone {
+            width: 100%;
+        }
+
         .icon-social {
             font-size: 1.8rem;
             color: white;
+
+            @include phone {
+                font-size: 2.2rem;
+            }
         }
 
         &::before {

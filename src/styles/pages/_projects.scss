@@ -9,6 +9,11 @@
     height: 70vh;
     transform: translateX(70%);
 
+    @include phone {
+        width: 85vw;
+        padding: 9rem 5rem;
+    }
+
     &__title {
         font-family: $titleFont;
         font-size: 4rem;
@@ -44,6 +49,12 @@
             clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
             cursor: pointer;
 
+            @include phone {
+                padding-left: 2rem;
+                clip-path: none;
+                border-radius: 0.5rem;
+            }
+
             .img-01 {
                 @include imageBlur(
                     "https://res.cloudinary.com/oscar-perez/image/upload/v1654077750/RecipeAssets/FoodCategory/fob_finder_app_olkx9y.png",
@@ -56,6 +67,13 @@
                     "https://res.cloudinary.com/oscar-perez/image/upload/v1654077754/RecipeAssets/FoodCategory/sneakers_ecommerce_lla1yx.png",
                     -40%
                 );
+
+                @include phone {
+                    @include imageBlur(
+                        "https://res.cloudinary.com/oscar-perez/image/upload/v1654077754/RecipeAssets/FoodCategory/sneakers_ecommerce_lla1yx.png",
+                        0
+                    );
+                }
             }
 
             .img-03 {
@@ -69,6 +87,10 @@
                 font-family: $normalFont;
                 font-size: 1.4rem;
                 color: white;
+
+                @include phone {
+                    font-size: 1.8rem;
+                }
             }
 
             &:hover {
@@ -84,6 +106,10 @@
         .btn-home {
             @include btnHome(12rem, 4rem);
             margin-top: 3rem;
+
+            @include phone {
+                @include btnHome(25rem, 5rem);
+            }
         }
     }
 }
