@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    padding: 10rem 0;
+    padding: 10rem 0 5rem 0;
 
     &__title {
         &--title {
@@ -72,6 +72,73 @@
                 p {
                     font-family: $normalFont;
                     font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    &__education {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 6rem;
+        width: 70vw;
+
+        &--title {
+            align-self: center;
+            font-size: 3.4rem;
+            font-family: $titleFont;
+            color: white;
+        }
+
+        &--cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+
+            .card {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                width: 30%;
+                height: 5rem;
+                padding: 1rem 4rem;
+                background-color: $backgroundColorLight;
+                background: linear-gradient(0.25turn, #353535c9, #6565654f);
+                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+                    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                border-radius: 0.8rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $contrastColorLight;
+                }
+
+                &__img {
+                    width: 15%;
+                }
+
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 1rem;
+
+                    &--title {
+                        font-family: $normalFont;
+                        font-size: 1.2rem;
+                        color: $contrastColor;
+                    }
+
+                    &--time {
+                        font-family: $normalFont;
+                        font-size: 1rem;
+                        color: gray;
+                    }
                 }
             }
         }

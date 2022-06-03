@@ -19,6 +19,7 @@ const observer = () => {
     const hero$ = document.getElementById("hero");
     const aboutFirst$ = document.getElementById("about-first");
     const aboutSecond$ = document.getElementById("about-second");
+    const aboutThird$ = document.querySelectorAll("#about-third");
     const proCards$ = document.querySelectorAll("#pro-card");
     const contact$ = document.querySelectorAll("#contact-id");
     const footer$ = document.getElementById("footer");
@@ -37,6 +38,7 @@ const observer = () => {
 
     proCards$.forEach((el) => io.observe(el));
     contact$.forEach((el) => io.observe(el));
+    aboutThird$.forEach((el) => io.observe(el));
 
     io.observe(hero$);
     io.observe(aboutFirst$);

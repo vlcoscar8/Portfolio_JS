@@ -4,7 +4,7 @@ const printProjects = () => {
     const projects$ = document.getElementById("projects");
 
     projects$.innerHTML = `
-      <p class="projects__title">Projects</p>
+      <p class="projects__title no-show" id="pro-card">Projects</p>
       <div class="projects__container">
         <figure class="projects__container--card no-show" id="pro-card">
           <p>Job finder web</p>
