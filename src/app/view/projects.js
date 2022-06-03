@@ -4,7 +4,7 @@ const printProjects = () => {
     const projects$ = document.getElementById("projects");
 
     projects$.innerHTML = `
-      <p class="projects__title no-show" id="pro-card">Projects</p>
+      <p class="projects__title" >Projects</p>
       <div class="projects__container">
         <figure class="projects__container--card no-show" id="pro-card">
           <p>Job finder web</p>
@@ -29,6 +29,7 @@ const printProjects = () => {
 
         cards$.forEach((el) =>
             el.addEventListener("click", () => {
+                next$.classList.add("display");
                 next$.classList.add("center");
                 cards$.forEach((el) => el.classList.add("left"));
 

@@ -76,9 +76,13 @@ const printDetailProject = (id) => {
     const backNext = () => {
         const back$ = document.getElementById("back");
         const cards$ = document.querySelectorAll("#pro-card");
-        const next$ = document.getElementById("next");
+
+        const remove = () => {
+            next$.classList.remove("display");
+        };
 
         back$.addEventListener("click", () => {
+            setTimeout(remove, 1000);
             next$.classList.remove("center");
             cards$.forEach((el) => el.classList.remove("left"));
         });
