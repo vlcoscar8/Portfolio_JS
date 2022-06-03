@@ -1,0 +1,7 @@
+$breakpoint: 500px;
+
+@mixin phone {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}

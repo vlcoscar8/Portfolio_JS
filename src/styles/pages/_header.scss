@@ -1,5 +1,5 @@
 .header {
-    min-width: 100vw;
+    width: 100vw;
     height: 8rem;
     background-color: transparent;
     position: fixed;
@@ -9,6 +9,10 @@
     justify-content: center;
     padding: 1rem;
     z-index: 10;
+
+    @include phone {
+        justify-content: end;
+    }
 
     &__logo {
         color: $contrastColor;

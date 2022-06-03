@@ -5,7 +5,6 @@
 
     &__title {
         position: absolute;
-        width: 60rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -15,9 +14,17 @@
         left: 10rem;
         top: 10rem;
 
+        @include phone {
+            align-items: center;
+        }
+
         &--name {
             color: white;
             font-size: 5rem;
+
+            @include phone {
+                font-size: 3.5rem;
+            }
 
             &-span {
                 color: $contrastColor;
@@ -28,6 +35,10 @@
             color: white;
             font-size: 3rem;
 
+            @include phone {
+                font-size: 3rem;
+            }
+
             &-mearn {
                 color: $contrastColor;
             }
@@ -37,6 +48,11 @@
             @include btnHome(10rem, 4rem);
             margin-top: 2rem;
             font-weight: 600;
+
+            @include phone {
+                @include btnHome(25rem, 5rem);
+                font-size: 2rem;
+            }
         }
     }
 
@@ -44,6 +60,11 @@
         position: absolute;
         right: 7rem;
         top: 25rem;
+
+        @include phone {
+            right: 0;
+            top: 50%;
+        }
 
         ul::before {
             content: "";

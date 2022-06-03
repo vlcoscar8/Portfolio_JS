@@ -1,4 +1,4 @@
-import { printDetailProject } from "../controller/printDetailProject.js";
+import { printDetailProject } from "./detailProject.js";
 
 const printProjects = () => {
     const projects$ = document.getElementById("projects");
