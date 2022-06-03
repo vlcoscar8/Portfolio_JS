@@ -38,17 +38,39 @@ const printDetailProject = (id) => {
         </div>
         <h3 class="next__title--code no-show" id="next-io">Code details</h3>
         <div class="next__code">
-                ${project.code.map(
-                    (el) => `
+                ${project.code
+                    .map(
+                        (el) => `
                     <figure class="next__code--card " >
-                        <img src="${el.img}" id="next-io" class="image-pop no-show"/>
+                        <img src="${
+                            el.img
+                        }" id="next-io" class="image-pop no-show"/>
                         <div class="text-container  no-show" id="next-io">
-                            <p>${el.description}</p>
+                            <div class="text-container__content">
+                             <p>${el.description}</p>
+                            </div>
+                            <div class="text-container__functions">
+                                ${el.functions
+                                    .map(
+                                        (el) => `
+                                    <ul class="text-container__functions--detail">
+                                    
+                                        <p class="function-name">${el.name}</p>
+                                        <p class="function-desc">${el.resume}</p>
+                                    </ul>
+                                `
+                                    )
+                                    .join("")}
+                            </div>
                         </div>
                     </figure>
                 `
-                )}
+                    )
+                    .join("")}
         </div>
+        <button class="btn__git no-show" id="next-io"><a href="${
+            project.git
+        }" target="blank">See the code on Git Hub</a></button>
     `;
 
     const backNext = () => {

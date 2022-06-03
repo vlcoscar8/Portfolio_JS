@@ -140,7 +140,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             gap: 3rem;
             padding: 3rem 10rem;
             width: 70vw;
@@ -148,7 +148,7 @@
             &--card {
                 display: flex;
                 align-items: start;
-                justify-content: center;
+                justify-content: start;
                 gap: 3rem;
                 position: relative;
 
@@ -159,20 +159,77 @@
 
                 .text-container {
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 1rem 5rem;
-                    background: linear-gradient(0.25turn, #656565d3, #202020);
-                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-                        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 60%;
+                    justify-content: start;
+                    gap: 3rem;
 
-                    p {
-                        color: white;
-                        font-size: 1.5rem;
-                        font-family: $normalFont;
+                    &__content {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+
+                        padding: 1rem 5rem;
+                        background: linear-gradient(
+                            0.25turn,
+                            #656565d3,
+                            #202020
+                        );
+                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+                            rgba(17, 17, 26, 0.05) 0px 8px 32px;
+                        p {
+                            color: white;
+                            font-size: 1.5rem;
+                            font-family: $normalFont;
+                        }
+                    }
+
+                    &__functions {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        align-items: flex-start;
+                        justify-content: start;
+
+                        &--detail {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5rem;
+                            padding: 0 4rem;
+                            position: relative;
+
+                            &::after {
+                                content: "";
+                                width: 1rem;
+                                height: 1rem;
+                                background-color: $contrastColor;
+                                position: absolute;
+                                top: 0.2rem;
+                                left: 1.8rem;
+                                border-radius: 50%;
+                                box-shadow: $contrastColor 0px 0px 10px;
+                            }
+
+                            .function-name {
+                                font-size: 1.1rem;
+                                font-family: $normalFont;
+                                color: $contrastColor;
+                            }
+
+                            .function-desc {
+                                font-size: 1.1rem;
+                                font-family: $normalFont;
+                                color: white;
+                            }
+                        }
                     }
                 }
             }
+        }
+
+        .btn__git {
+            @include btnHome(22rem, 4rem);
         }
     }
 }

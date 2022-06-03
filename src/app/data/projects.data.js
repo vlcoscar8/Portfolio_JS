@@ -3,6 +3,7 @@ export const projectsData = [
         id: 1,
         title: "Job finder web",
         vercel: "https://job-finder-app.vercel.app/#home",
+        git: "https://github.com/vlcoscar8/Job_finder_app",
         description:
             "A web where you can find the last job offers from Remotive Api. With a filter options, pagination and list of favourites jobs. This is the first project I've done with Javascript calling a public Api and also I've practised Object Oriented Programming",
         stack: [
@@ -32,15 +33,15 @@ export const projectsData = [
                     "The code below describe the way how the data is printed on the view",
                 functions: [
                     {
-                        name: "document.createElement('div')",
+                        name: "Document.createElement('div')",
                         resume: "Create the cointainer where the data will be stored with this method",
                     },
                     {
-                        name: "function.map(el => 'content'",
+                        name: "Function.map(el => 'content'",
                         resume: "Use the map function to iterate and return the content into an array",
                     },
                     {
-                        name: "array.join('')",
+                        name: "Array.join('')",
                         resume: "Use the join function to unify all the html created with map previously to print to the view",
                     },
                 ],
@@ -51,7 +52,7 @@ export const projectsData = [
                     "How the data from the Remotive Api is getted and used",
                 functions: [
                     {
-                        name: "async - await",
+                        name: "Async - Await",
                         resume: "Use async - await method to fetch to an endpoint in this case with a limit query",
                     },
                 ],
@@ -62,15 +63,15 @@ export const projectsData = [
                     "In this case, the code below describe how the favourite list is managed",
                 functions: [
                     {
-                        name: "classlist.add('className')",
+                        name: "Classlist.add('className')",
                         resume: "Add a class style to an element",
                     },
                     {
-                        name: "array.forEach(el =>  el.remove())",
+                        name: "Array.forEach(el =>  el.remove())",
                         resume: "Remove each element if a condition is true",
                     },
                     {
-                        name: "callbackFunctions",
+                        name: "CallbackFunctions",
                         resume: "Manage the data and send to an other function to do something else",
                     },
                 ],
@@ -81,15 +82,15 @@ export const projectsData = [
                     "Last picture is about the OOP application to print the companies data",
                 functions: [
                     {
-                        name: "new Class()",
+                        name: "New Class(...)",
                         resume: "Create a new class in an OOP method and pass info to the constructor",
                     },
                     {
-                        name: "array.push()",
+                        name: "Array.push(...)",
                         resume: "Set some info to an array to manage later in other function",
                     },
                     {
-                        name: "element.setAttribute('attr', 'value')",
+                        name: "Element.setAttribute('attr', 'value')",
                         resume: "Set an atributte to an lement with an specific value to use later",
                     },
                 ],
@@ -101,6 +102,7 @@ export const projectsData = [
         id: 2,
         title: "Sneakers e-commerce",
         vercel: "https://sneakers-ecommerce-nine.vercel.app/",
+        git: "https://github.com/vlcoscar8/Sneakers-ecommerce",
         description:
             "An e-commerce about sneakers with product-cart, personal account view and a commentary box feature. This project is an start-to-end project with not only frontend development, but also backend with an APi to manage all the data used in the application.",
         stack: [
@@ -157,15 +159,15 @@ export const projectsData = [
                     "The subscribe methods created to manage the information that comes from the api",
                 functions: [
                     {
-                        name: "private HTTPClient",
+                        name: "Private HTTPClient",
                         resume: "Insert into the constructor a service to use the calls to the api",
                     },
                     {
-                        name: "this.http.get('endpoint')",
+                        name: "This.http.get('endpoint')",
                         resume: "Use the http service instead of fetch",
                     },
                     {
-                        name: "environment.apiUrl",
+                        name: "Environment.apiUrl",
                         resume: "Use the url from the api that is stored in a environment folder",
                     },
                 ],
@@ -176,11 +178,11 @@ export const projectsData = [
                     "The pipes created to manage the list of products and filter by several manners",
                 functions: [
                     {
-                        name: "pipe",
+                        name: "Pipe",
                         resume: "Use a pipe to filter data before to pass to a component",
                     },
                     {
-                        name: "private PaginationService",
+                        name: "Private PaginationService",
                         resume: "Use a service created by my self to set and get the values needed to filter in to the pipe",
                     },
                     {
@@ -199,11 +201,11 @@ export const projectsData = [
                         resume: "Use the method replaySubject to listen all the changes done into the variable and pass it to a other component",
                     },
                     {
-                        name: "product: IProduct",
+                        name: "Product: IProduct",
                         resume: "Use the interfaces from typescript to evaluate if the data used is correct",
                     },
                     {
-                        name: "value.next(..)",
+                        name: "Value.next(...)",
                         resume: "Send the data to the value through the next function if all it is correct",
                     },
                 ],
@@ -218,11 +220,11 @@ export const projectsData = [
                         resume: "Inside of a pipe use the switchMap to manage the data before subscribe on it",
                     },
                     {
-                        name: "forkJoin(ObservableArray)",
+                        name: "ForkJoin(ObservableArray)",
                         resume: "Return an array of observables values with forkJoin function, is similar to promise all in JS",
                     },
                     {
-                        name: "subscribe(...)",
+                        name: "Subscribe(...)",
                         resume: "Get teh data once the promise is finished and set into the value",
                     },
                 ],
@@ -234,6 +236,7 @@ export const projectsData = [
         id: 3,
         title: "Recipe social media app",
         vercel: "https://recipes-app-pi-dun.vercel.app/",
+        git: "https://github.com/vlcoscar8/Recipes_App",
         description:
             "A recipe social media web, where the users can create their own recipes and post on the web, a personal account view where the user can update his personal info and also a backend api created with all the endpoints to get/post and delete the info. This project was done to practise the user register flow with JWT",
         stack: [
@@ -271,7 +274,7 @@ export const projectsData = [
                     "A picture about how the form data is managed to update the personal information in the personal account view",
                 functions: [
                     {
-                        name: "e.target.files",
+                        name: "E.target.files",
                         resume: "To obtain the input type file from the form",
                     },
                     {
@@ -290,11 +293,11 @@ export const projectsData = [
                     "The code below shows how the data is managed from the frontend to get the data from the backend",
                 functions: [
                     {
-                        name: "async - await",
+                        name: "Async - Await",
                         resume: "Use async await method to fetch the endpoint and convert into data to use in the page",
                     },
                     {
-                        name: "method: POST",
+                        name: "Method: POST",
                         resume: "Modify the header into the fetch function to post data to the database",
                     },
                     {
@@ -309,7 +312,7 @@ export const projectsData = [
                     "In this case the picture show the code about how the data is printed to the view",
                 functions: [
                     {
-                        name: "forEach",
+                        name: "ForEach",
                         resume: "Iterate through the list to add the html into the container for each element",
                     },
                     {
@@ -317,7 +320,7 @@ export const projectsData = [
                         resume: "Use the template string to add the variables into the html in a easy way",
                     },
                     {
-                        name: "insertAdjacentHTML('where', 'what')",
+                        name: "InsertAdjacentHTML('where', 'what')",
                         resume: "Use this function to insert the whole html created previously into the element selected",
                     },
                 ],
