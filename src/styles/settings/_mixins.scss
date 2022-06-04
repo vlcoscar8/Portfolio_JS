@@ -71,6 +71,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include phone {
+        background-image: none;
+        background-color: $backgroundColor;
+    }
 }
 
 @mixin imageBlur($imageUrl, $top) {
