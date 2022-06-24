@@ -83,6 +83,13 @@
                 );
             }
 
+            .img-03 {
+                @include imageBlur(
+                    "https://res.cloudinary.com/oscar-perez/image/upload/v1656059866/RecipeAssets/FoodCategory/home_uqcx5u.png",
+                    0
+                );
+            }
+
             p {
                 font-family: $normalFont;
                 font-size: 1.4rem;

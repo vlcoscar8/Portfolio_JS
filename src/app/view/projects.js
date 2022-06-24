@@ -19,6 +19,10 @@ const printProjects = () => {
           <p>Recipe social media</p>
           <div class="img-03"></div>
         </figure>
+        <figure class="projects__container--card no-show" id="pro-card">
+          <p>React Foro</p>
+          <div class="img-04"></div>
+        </figure>
         <button class="btn-home" id="pro-card" ><a href="https://github.com/vlcoscar8" target="blank">Find more on Github</a></button>
       </div>
     `;
