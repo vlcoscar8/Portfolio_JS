@@ -4,6 +4,7 @@ import { printHero } from "./view/hero.js";
 import { printAbout } from "./view/about.js";
 import { printProjects } from "./view/projects.js";
 import { printContact } from "./view/contact.js";
+import { printFooter } from "./view/footer";
 
 window.onload = () => {
     window.scrollTo(0, 0);
@@ -12,6 +13,7 @@ window.onload = () => {
     printAbout();
     printProjects();
     printContact();
+    printFooter();
     observer();
 };
 
