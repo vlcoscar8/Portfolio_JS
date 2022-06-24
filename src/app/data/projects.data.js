@@ -225,7 +225,7 @@ export const projectsData = [
                     },
                     {
                         name: "Subscribe(...)",
-                        resume: "Get teh data once the promise is finished and set into the value",
+                        resume: "Get the data once the promise is finished and set into the value",
                     },
                 ],
                 img: "https://res.cloudinary.com/oscar-perez/image/upload/v1654101075/RecipeAssets/FoodCategory/sneakers_ecommerce_code_05_cid1y9.png",
@@ -325,6 +325,132 @@ export const projectsData = [
                     },
                 ],
                 img: "https://res.cloudinary.com/oscar-perez/image/upload/v1654101147/RecipeAssets/FoodCategory/recipe_code-03_rtxea3.png",
+            },
+        ],
+    },
+    {
+        id: 4,
+        title: "React Foro",
+        vercel: "https://react-foro.netlify.app",
+        git: "https://github.com/vlcoscar8/REACT--Foro_social",
+        description:
+            "A React Foro about several topics where the users can create topics, comments and replies. And also there is a personal profile page where the user can change coins to update the avatar profile with a system of incentives where the user earn 25 coins when a topic is created and 5 coins where other user comments on your topic",
+        stack: [
+            {
+                name: "React",
+                img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+            },
+            {
+                name: "Sass",
+                img: "https://cdn.iconscout.com/icon/free/png-256/sass-226054.png",
+            },
+            {
+                name: "NodeJs",
+                img: "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png",
+            },
+            {
+                name: "Mongo",
+                img: "https://img.icons8.com/color/452/mongodb.png",
+            },
+        ],
+        pictures: [
+            {
+                img: "https://res.cloudinary.com/oscar-perez/image/upload/v1656059866/RecipeAssets/FoodCategory/home_uqcx5u.png",
+            },
+        ],
+        code: [
+            {
+                description: "A picture about the structure of the project",
+                functions: [
+                    {
+                        name: "State folder",
+                        resume: "Where the conxtext and the redux is managed",
+                    },
+                    {
+                        name: "Custom hooks",
+                        resume: "A folder where all the reusable functions are stored",
+                    },
+                    {
+                        name: "Components",
+                        resume: "The core components and the shared components like buttons or header",
+                    },
+                ],
+                img: "https://res.cloudinary.com/oscar-perez/image/upload/v1656060129/RecipeAssets/FoodCategory/home_flf0am.png",
+            },
+            {
+                description:
+                    "The reducer created to manage the user logged information",
+                functions: [
+                    {
+                        name: "Initial state",
+                        resume: "The user information is getted from the local storage if exist",
+                    },
+                    {
+                        name: "Reducer",
+                        resume: "A switch function where it helps to manage the different kind of actions dispached to the state",
+                    },
+                    {
+                        name: "Actions",
+                        resume: "The type and the payload helps to know with function of the switch function should be done",
+                    },
+                ],
+                img: "https://res.cloudinary.com/oscar-perez/image/upload/v1656060378/RecipeAssets/FoodCategory/home_w4kqkp.png",
+            },
+            {
+                description:
+                    "The Home component with useEffect and useState and some filters functions",
+                functions: [
+                    {
+                        name: "UseEffect",
+                        resume: "The useEffect set the family list that comes from the redux custom hook called 'useFamilyList'",
+                    },
+                    {
+                        name: "Filter by name",
+                        resume: "A function to filter the list by the name that the user writes in an input",
+                    },
+                    {
+                        name: "Sort and reset functions",
+                        resume: "A functions to sort the list by quantity of topics and a reset function to set the initial state",
+                    },
+                ],
+                img: "https://res.cloudinary.com/oscar-perez/image/upload/v1656061052/RecipeAssets/FoodCategory/home_bngcrs.png",
+            },
+            {
+                description:
+                    "Formik component implemented when the user can create a topic",
+                functions: [
+                    {
+                        name: "Initial values",
+                        resume: "The form needs an initial values stored in a constant",
+                    },
+                    {
+                        name: "Field tag",
+                        resume: "The Formik uses a field tag instead of input, the select options input is created with the list coming from the api",
+                    },
+                    {
+                        name: "Formik input file",
+                        resume: "To upload an image is used a function to handle the file and create a form data to send to the api",
+                    },
+                ],
+                img: "https://res.cloudinary.com/oscar-perez/image/upload/v1656061159/RecipeAssets/FoodCategory/home_rzkpod.png",
+            },
+            {
+                description: "Unit Testing with Jest",
+                functions: [
+                    {
+                        name: "Testing using context",
+                        resume: "A provider with a mock values is included in the test",
+                    },
+                    {
+                        name: "Query by test id",
+                        resume: "To get the info from the screen rendered is used the 'queryByTestId' and checked with 'toBeTruthy'",
+                    },
+                    {
+                        name: "Testing Context",
+                        resume: "If the user has been logged the username should print on the header, thats why the context is needed to be included",
+                    },
+                ],
+                img: "https://res.cloudinary.com/oscar-perez/image/upload/v1656061607/RecipeAssets/FoodCategory/home_qrwi1m.png",
             },
         ],
     },
