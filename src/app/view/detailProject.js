@@ -21,12 +21,16 @@ const printDetailProject = (id) => {
                     project.pictures[0].img
                 }" id="next-io" class="no-show"/>
                 <div class="buttons">
-                    <button class="button-vercel no-show" id="next-io"><a href="${
+                    <a href="${
                         project.vercel
-                    }" target="blank">See the project deployed</a></button>
-                    <button class="button-git no-show" id="next-io"><a href="${
+                    }" target="blank" class="button-vercel no-show" id="next-io">
+                        See the project deployed
+                    </a>
+                    <a class="button-git no-show" id="next-io" href="${
                         project.git
-                    }" target="blank">See the code on Git Hub</a></button>
+                    }" target="blank">
+                        See the code on Git Hub
+                    </a>
                 </div>
             </div>
         </div>
