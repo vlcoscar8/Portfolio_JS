@@ -116,22 +116,42 @@
                 @include phone {
                     position: relative;
                     left: -6rem;
-                    top: 4rem;
+                    top: 8rem;
                 }
 
                 img {
-                    height: 80%;
+                    height: 90%;
 
                     @include phone {
                         width: 85vw;
                     }
                 }
 
-                .button-vercel {
-                    @include btnHome(14rem, 5rem);
+                .buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
 
                     @include phone {
+                        flex-direction: column;
+                    }
+
+                    .button-vercel {
                         @include btnHome(25rem, 7rem);
+                        font-size: 1.8rem;
+                        @include phone {
+                            @include btnHome(25rem, 7rem);
+                        }
+                    }
+
+                    .button-git {
+                        @include btnHome(25rem, 7rem);
+                        font-size: 1.8rem;
+
+                        @include phone {
+                            @include btnHome(75vw, 7rem);
+                        }
                     }
                 }
             }
@@ -147,7 +167,7 @@
 
             @include phone {
                 margin-left: 0;
-                margin-top: 7rem;
+                margin-top: 20rem;
             }
         }
 
@@ -213,7 +233,7 @@
 
             &--card {
                 display: flex;
-                align-items: start;
+                align-items: center;
                 justify-content: start;
                 gap: 3rem;
                 position: relative;
@@ -223,11 +243,21 @@
                 }
 
                 .image-pop {
-                    width: 30rem;
+                    width: 80rem;
                     z-index: 1;
 
                     @include phone {
-                        width: 90vw;
+                        width: 85vw;
+                        margin-left: -7rem;
+                    }
+                }
+
+                .image-pop-phone {
+                    width: 25rem;
+                    z-index: 1;
+
+                    @include phone {
+                        width: 55vw;
                         margin-left: -7rem;
                     }
                 }
@@ -236,7 +266,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    width: 60%;
+                    width: 40rem;
                     justify-content: start;
                     gap: 3rem;
 
@@ -327,15 +357,6 @@
                         }
                     }
                 }
-            }
-        }
-
-        .btn__git {
-            @include btnHome(22rem, 4rem);
-
-            @include phone {
-                @include btnHome(85vw, 7rem);
-                margin-left: -12rem;
             }
         }
     }

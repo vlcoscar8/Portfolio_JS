@@ -78,7 +78,7 @@
 
             .img-03 {
                 @include imageBlur(
-                    "https://res.cloudinary.com/oscar-perez/image/upload/v1654086321/RecipeAssets/FoodCategory/recipe_o4yatx.png",
+                    "https://res.cloudinary.com/oscar-perez/image/upload/v1656497041/RecipeAssets/FoodCategory/Captura_xa8jvz.png",
                     0
                 );
             }
@@ -92,7 +92,7 @@
 
             p {
                 font-family: $normalFont;
-                font-size: 1.4rem;
+                font-size: 2rem;
                 color: white;
 
                 @include phone {
@@ -111,7 +111,8 @@
         }
 
         .btn-home {
-            @include btnHome(12rem, 4rem);
+            @include btnHome(25rem, 6rem);
+            font-size: 2rem;
             margin-top: 3rem;
 
             @include phone {

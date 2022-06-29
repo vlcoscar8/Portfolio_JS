@@ -19,7 +19,7 @@
 
         &--title {
             font-family: $titleFont;
-            font-size: 4rem;
+            font-size: 5rem;
             align-self: flex-start;
         }
 
@@ -36,7 +36,7 @@
             p {
                 font-family: $normalFont;
                 max-width: 80ch;
-                font-size: 1.5rem;
+                font-size: 2rem;
 
                 span {
                     color: $contrastColor;
@@ -72,7 +72,7 @@
 
         &--title {
             align-self: center;
-            font-size: 3.4rem;
+            font-size: 4rem;
             font-family: $titleFont;
             color: white;
         }
@@ -126,7 +126,7 @@
 
         &--title {
             align-self: center;
-            font-size: 3.4rem;
+            font-size: 4rem;
             font-family: $titleFont;
             color: white;
         }
@@ -185,7 +185,7 @@
 
                     &--title {
                         font-family: $normalFont;
-                        font-size: 1.2rem;
+                        font-size: 1.4rem;
                         color: $contrastColor;
 
                         @include phone {
@@ -195,7 +195,7 @@
 
                     &--time {
                         font-family: $normalFont;
-                        font-size: 1rem;
+                        font-size: 1.3rem;
                         color: gray;
 
                         @include phone {

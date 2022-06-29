@@ -20,9 +20,14 @@ const printDetailProject = (id) => {
                 <img src="${
                     project.pictures[0].img
                 }" id="next-io" class="no-show"/>
-                <button class="button-vercel no-show" id="next-io"><a href="${
-                    project.vercel
-                }" target="blank">See the project deployed</a></button>
+                <div class="buttons">
+                    <button class="button-vercel no-show" id="next-io"><a href="${
+                        project.vercel
+                    }" target="blank">See the project deployed</a></button>
+                    <button class="button-git no-show" id="next-io"><a href="${
+                        project.git
+                    }" target="blank">See the code on Git Hub</a></button>
+                </div>
             </div>
         </div>
         <h3 class="next__title--stack" id="next-io">Stack used</h3>
@@ -36,41 +41,39 @@ const printDetailProject = (id) => {
             `
             )}
         </div>
-        <h3 class="next__title--code no-show" id="next-io">Code details</h3>
+        <h3 class="next__title--code no-show" id="next-io">Features</h3>
         <div class="next__code">
-                ${project.code
-                    .map(
-                        (el) => `
-                    <figure class="next__code--card " >
-                        <img src="${
-                            el.img
-                        }" id="next-io" class="image-pop no-show"/>
-                        <div class="text-container  no-show" id="next-io">
-                            <div class="text-container__content">
-                             <p>${el.description}</p>
-                            </div>
-                            <div class="text-container__functions">
-                                ${el.functions
-                                    .map(
-                                        (el) => `
-                                    <ul class="text-container__functions--detail">
-                                    
-                                        <p class="function-name">${el.name}</p>
-                                        <p class="function-desc">${el.resume}</p>
-                                    </ul>
-                                `
-                                    )
-                                    .join("")}
-                            </div>
-                        </div>
-                    </figure>
-                `
-                    )
-                    .join("")}
+            <figure class="next__code--card">
+                <img src="${
+                    project.features[0].img
+                }" id="next-io" class="image-pop no-show"/>
+                <div class="text-container  no-show" id="next-io">
+                    <div class="text-container__content">
+                    <p>${project.features[0].description}</p>
+                    </div>
+                </div>
+            </figure>
+            <figure class="next__code--card">
+                <div class="text-container  no-show" id="next-io">
+                    <div class="text-container__content">
+                    <p>${project.features[1].description}</p>
+                    </div>
+                </div>
+                <img src="${
+                    project.features[1].img
+                }" id="next-io" class="image-pop no-show"/>
+            </figure>
+            <figure class="next__code--card">
+                <img src="${
+                    project.features[2].img
+                }" id="next-io" class="image-pop-phone no-show"/>
+                <div class="text-container  no-show" id="next-io">
+                    <div class="text-container__content">
+                    <p>${project.features[2].description}</p>
+                    </div>
+                </div>
+            </figure>
         </div>
-        <button class="btn__git no-show" id="next-io"><a href="${
-            project.git
-        }" target="blank">See the code on Git Hub</a></button>
     `;
 
     const backNext = () => {

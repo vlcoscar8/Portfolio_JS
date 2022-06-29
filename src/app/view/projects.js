@@ -16,7 +16,7 @@ const printProjects = () => {
           <div class="img-02"></div>
         </figure>
         <figure class="projects__container--card no-show" id="pro-card">
-          <p>Recipe social media</p>
+          <p>Angular Wallet</p>
           <div class="img-03"></div>
         </figure>
         <figure class="projects__container--card no-show" id="pro-card">
