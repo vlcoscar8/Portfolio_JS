@@ -25,6 +25,7 @@ const observer = () => {
     const proCards$ = document.querySelectorAll("#pro-card");
     const contact$ = document.querySelectorAll("#contact-id");
     const footer$ = document.getElementById("footer");
+    const button$ = document.getElementById("button-git");
 
     const io = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -46,4 +47,5 @@ const observer = () => {
     io.observe(aboutFirst$);
     io.observe(aboutSecond$);
     io.observe(footer$);
+    io.observe(button$);
 };
