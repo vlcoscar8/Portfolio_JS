@@ -23,7 +23,7 @@ const printProjects = () => {
           <p>React Foro</p>
           <div class="img-04"></div>
         </figure>
-        <button class="btn-home" id="pro-card" ><a href="https://github.com/vlcoscar8" target="blank">Find more on Github</a></button>
+        <button class="btn-home"><a href="https://github.com/vlcoscar8" target="blank">Find more on Github</a></button>
       </div>
     `;
 
