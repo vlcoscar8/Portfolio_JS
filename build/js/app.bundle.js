@@ -3286,7 +3286,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"printHeader\": () => (/* binding */ printHeader)\n/* harmony export */ });\nconst printHeader = () => {\n  const header$ = document.getElementById(\"header\");\n  header$.innerHTML = `\n    <h1 class=\"header__logo\"><a href=\"#body\">OPR</a></h1>\n    <ul class=\"header__list\">\n      <li><a href=\"#about\">About</a></li>\n      <li><a href=\"#projects\">Projects</a></li>\n      <li><a href=\"#contact\">Contact</a></li>\n    </ul>\n  `;\n};\n\n\n\n//# sourceURL=webpack://webpack-js/./src/app/view/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"printHeader\": () => (/* binding */ printHeader)\n/* harmony export */ });\nconst printHeader = () => {\n  const header$ = document.getElementById(\"header\");\n  header$.innerHTML = `\n    <h1 class=\"header__logo\"><a href=\"#hero\">OPR</a></h1>\n    <ul class=\"header__list\">\n      <li><a href=\"#about\">About</a></li>\n      <li><a href=\"#projects\">Projects</a></li>\n      <li><a href=\"#contact\">Contact</a></li>\n    </ul>\n  `;\n};\n\n\n\n//# sourceURL=webpack://webpack-js/./src/app/view/header.js?");
 
 /***/ }),
 
