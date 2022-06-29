@@ -30,12 +30,14 @@ const printProjects = () => {
     const scrollHorizontal = () => {
         const cards$ = document.querySelectorAll("#pro-card");
         const next$ = document.getElementById("next");
+        const button$ = document.getElementById("button-git");
 
         cards$.forEach((el) =>
             el.addEventListener("click", () => {
                 next$.classList.add("display");
                 next$.classList.add("center");
                 cards$.forEach((el) => el.classList.add("left"));
+                button$.classList.add("left");
 
                 //Get the id project from the image div class and pass it to the function to print in next slide the info from the project stored in data
                 const projectId = parseInt(

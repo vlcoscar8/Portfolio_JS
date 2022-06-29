@@ -83,6 +83,7 @@ const printDetailProject = (id) => {
     const backNext = () => {
         const back$ = document.getElementById("back");
         const cards$ = document.querySelectorAll("#pro-card");
+        const button$ = document.getElementById("button-git");
 
         const remove = () => {
             next$.classList.remove("display");
@@ -92,6 +93,7 @@ const printDetailProject = (id) => {
             setTimeout(remove, 1000);
             next$.classList.remove("center");
             cards$.forEach((el) => el.classList.remove("left"));
+            button$.classList.remove("left");
         });
     };
 
