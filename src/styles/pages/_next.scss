@@ -138,14 +138,23 @@
                     }
 
                     .button-vercel {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
                         @include btnHome(25rem, 7rem);
                         font-size: 1.8rem;
+
                         @include phone {
                             @include btnHome(25rem, 7rem);
                         }
                     }
 
                     .button-git {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
                         @include btnHome(25rem, 7rem);
                         font-size: 1.8rem;
 
